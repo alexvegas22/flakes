@@ -3,21 +3,11 @@
 {
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Fingerprint Service
-  services.fprintd.enable = true;
   
   # Configure console keymap
   console.keyMap = "us";
 
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme = "where-is-my-sddm-theme";
 
-  services.pcscd.enable = true;
-  
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -34,114 +24,13 @@
     #media-session.enable = true;
   };
 
-  programs.zsh.enable = true ;
-  
   # Hyprland
-  programs.hyprland.enable = true;
-  # Optional, hint electron apps to use wayland:
-  programs.hyprlock.enable = true;
-  services.hypridle.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   programs.steam.enable = true;
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  services.emacs = {
-    enable = true;
-    defaultEditor = true;
-  };
-
-  services.udisks2.enable = true;
 
   virtualisation.docker.enable = true;
 
-  services.udev.packages = [ pkgs.yubikey-personalization ];
-  
-  services.emacs.package = with pkgs; (
-    (emacsPackagesFor emacs).emacsWithPackages (
-      epkgs: [ epkgs.vterm ]
-    )
-  );
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    arduino-ide
-    brightnessctl
-    cmake
-    cmake
-    cpio
-    discord
-    dive
-    docker
-    docker-compose
-    emacs
-    fastfetch
-    foot
-    fprintd
-    gcc
-    gimp
-    git
-    glib
-    glm
-    gnome-session
-    gnome-settings-daemon
-    grim
-    htop
-    evince    
-    hugo
-    hyprpaper
-    imagemagick
-    inkscape
-    keepassxc
-    killall
-    kitty
-    krita
-    kubectl
-    dunst
-    kubernetes
-    libinput-gestures
-    libreoffice    
-    macchina
-    meson
-    meson
-    minikube
-    networkmanagerapplet
-    ninja
-    nodejs
-    onboard
-    pavucontrol
-    podman
-    pywal
-    qemu
-    slurp
-    squeekboard
-    swww
-    texlive.combined.scheme-medium
-    texlive.combined.scheme-small 
-    texliveBasic
-    udiskie
-    udisks
-    unzip
-    usbutils
-    v4l-utils
-    vcluster
-    vim
-    waybar
-    waylock
-    wget
-    where-is-my-sddm-theme
-    wireplumber
-    wireshark
-    wl-clipboard
-    wmctrl
-    wofi
-    xapp
-    yubioath-flutter
-   bemenu
-  ];
-  
   fonts.packages = with pkgs; [
     nerdfonts
     noto-fonts

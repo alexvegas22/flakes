@@ -30,8 +30,12 @@
     gnome-settings-daemon
     grim
     htop
-    evince    
+    evince
+    firefox
     hugo
+    hyprland
+    hyprlock
+    hypridle
     hyprpaper
     imagemagick
     inkscape
