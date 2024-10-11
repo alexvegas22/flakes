@@ -12,7 +12,7 @@
     # ++ [ (import ./swaylock) ]
     # ++ [ (import ./wofi) ]
        (import ./zsh) 
-       (import ./gtk) 
+#       (import ./gtk) 
     # ++ [ (import ./mako) ]
     # ++ [ (import ./scripts) ]
     # ++ [ (import ./neofetch) ]
