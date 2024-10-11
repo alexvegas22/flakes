@@ -2,8 +2,8 @@
   services.xserver = {
     enable = true;
     layout = "us";
-    variant = "intl";
+    xkbVariant = "intl";
     exportConfiguration = true;
-    services.xserver.libinput.enable = true;
+    libinput.enable = true;
   };
 }
