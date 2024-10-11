@@ -13,6 +13,7 @@ let
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
+  programs.zsh.enable = true;
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
