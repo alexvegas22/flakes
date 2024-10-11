@@ -31,8 +31,7 @@ in
         (import ./user.nix) 
         (import ./wayland.nix) 
         (import ./virtualization.nix)
-        (import ./../../hosts/laptop/hardware-configuration.nix)
-        (import ./fonts.nix)
+        (import ./../../hosts/laptop/hardware-configuration.nix)      
       ];
       };
   }

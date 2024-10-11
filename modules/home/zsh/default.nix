@@ -13,6 +13,14 @@
       plugins = [ "git" ];
 
     };
+    environment = {
+      variables = {
+#        NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs;
+#        PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH";
+        KUBECONFIG=~/.kube/config;
+        
+      };
+    };
     shellAliases = {    
 
       # nixos
