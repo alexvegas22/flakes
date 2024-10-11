@@ -6,30 +6,8 @@
   
   # Configure console keymap
   console.keyMap = "us";
-
-
-
-  # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
   # Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  programs.steam.enable = true;
-
-  virtualisation.docker.enable = true;
 
   fonts.packages = with pkgs; [
     nerdfonts
@@ -52,11 +30,6 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
 
   # List services that you want to enable:
 
