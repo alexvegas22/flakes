@@ -19,6 +19,7 @@
       nixpkgs,
       home-manager,
       ... } @ inputs: {
+        
     nixosConfigurations = import ./modules/core/default.nix {
      inherit self nixpkgs inputs;
     };
