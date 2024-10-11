@@ -1,29 +1,8 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [
-    ./hosts/laptop/hardware-configuration.nix
-  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Hostname
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-
-  # User config
-  users.users.alex = {
-    isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel" "input" "docker" "dialout"];
-  };
-  
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Fingerprint Service
   services.fprintd.enable = true;
@@ -55,6 +34,8 @@
     #media-session.enable = true;
   };
 
+  programs.zsh.enable = true ;
+  
   # Hyprland
   programs.hyprland.enable = true;
   # Optional, hint electron apps to use wayland:
@@ -82,8 +63,6 @@
       epkgs: [ epkgs.vterm ]
     )
   );
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
