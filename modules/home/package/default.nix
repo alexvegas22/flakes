@@ -55,6 +55,7 @@
     networkmanagerapplet
     ninja
     nodejs
+    helm
     onboard
     pavucontrol
     podman
