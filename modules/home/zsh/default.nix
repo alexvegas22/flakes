@@ -6,8 +6,8 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];

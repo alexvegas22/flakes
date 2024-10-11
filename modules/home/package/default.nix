@@ -60,7 +60,6 @@
     squeekboard
     swww
     texlive.combined.scheme-medium
-    texlive.combined.scheme-small 
     texliveBasic
     udiskie
     udisks

@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "intl";
+    xkb.layout = "us";
+    xkb.variant = "intl";
     exportConfiguration = true;
     libinput.enable = true;
   };
