@@ -59,8 +59,7 @@
     slurp
     squeekboard
     swww
-    texlive.combined.scheme-medium
-    texliveBasic
+    texlive.combined.scheme-medium   
     udiskie
     udisks
     unzip

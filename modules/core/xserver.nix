@@ -4,6 +4,5 @@
     xkb.layout = "us";
     xkb.variant = "intl";
     exportConfiguration = true;
-    libinput.enable = true;
   };
 }
