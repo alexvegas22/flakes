@@ -13,15 +13,14 @@
       plugins = [ "git" ];
 
     };
-    environment = {
-      variables = {
-#        NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs;      
-        PATH = "${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:${pkgs.hello}/bin:$PATH";
+#    environment = {
+#       variables = {
+#         NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs;      
+#        PATH = "${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:${pkgs.hello}/bin:$PATH";
       
-        KUBECONFIG=~/.kube/config;
-        
-      };
-    };
+#         KUBECONFIG = "${pkgs.lib.getHome}/.kube/config";
+#       };
+#     };
     shellAliases = {    
 
       # nixos
