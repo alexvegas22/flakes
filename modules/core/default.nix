@@ -19,6 +19,7 @@ in
       [
         (import ./bootloader.nix) 
         # ++ [ (import ./hardware.nix) ]
+        (import ./wireshark.nix)
         (import ./xserver.nix) 
         (import ./steam.nix)
         (import ./network.nix) 
