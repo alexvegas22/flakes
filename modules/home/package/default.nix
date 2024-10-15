@@ -52,17 +52,20 @@
     meson
     meson
     minikube
+    mullvad-vpn
     networkmanagerapplet
     ninja
     nodejs
     kubernetes-helm
     onboard
     pavucontrol
+    ciscoPacketTracer8
     podman
     pywal
     qemu
     slurp
     squeekboard
+    stremio
     swww
     texlive.combined.scheme-medium   
     udiskie

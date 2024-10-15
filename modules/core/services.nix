@@ -6,7 +6,7 @@
     libinput.enable = true;
     udisks2.enable = true;
     pcscd.enable = true;
-    
+    mullvad-vpn.enable = true;
     # Enable CUPS to print documents.
     printing.enable = true;
 
