@@ -6,12 +6,13 @@
     #  ++ [ (import ./vscode) ]
     # ++ [ (import ./chromium) ]
     # ++ [ (import ./hyprland) ]
-    # ++ [ (import ./gaming) ]
-       (import ./git) 
-       (import ./foot) 
-    # ++ [ (import ./swaylock) ]
+      # ++ [ (import ./gaming) ]
+      (import ./xdg-mimes.nix)
+      (import ./git) 
+      (import ./foot) 
+      # ++ [ (import ./swaylock) ]
     # ++ [ (import ./wofi) ]
-       (import ./zsh) 
+      (import ./zsh) 
 #       (import ./gtk) 
     # ++ [ (import ./mako) ]
     # ++ [ (import ./scripts) ]
@@ -19,6 +20,6 @@
     # ++ [ (import ./starship) ]
     # ++ [ (import ./wlogout) ]
     # ++ [ (import ./nvim) ]
-    (import ./package) 
+      (import ./package) 
 ];
 }
