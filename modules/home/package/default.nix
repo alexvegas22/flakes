@@ -16,6 +16,8 @@
     discord
     dive
     docker
+    openjdk
+    adoptopenjdk-icedtea-web
     docker-compose
     emacs
     fastfetch
@@ -30,8 +32,13 @@
     gnome-settings-daemon
     grim
     htop
+    gnuplot
     evince
     firefox
+    feh
+    nautilus
+    nemo
+    viewnior
     hugo
     hyprland
     hyprlock
@@ -64,10 +71,9 @@
     pywal
     qemu
     slurp
-    squeekboard
     stremio
     swww
-    texlive.combined.scheme-medium   
+    texlive.combined.scheme-full
     udiskie
     udisks
     unzip

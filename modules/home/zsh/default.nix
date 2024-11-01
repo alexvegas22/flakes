@@ -11,16 +11,8 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
-
-    };
-#    environment = {
-#       variables = {
-#         NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs;      
-#        PATH = "${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:${pkgs.hello}/bin:$PATH";
-      
-#         KUBECONFIG = "${pkgs.lib.getHome}/.kube/config";
-#       };
-#     };
+    };                  
+    
     shellAliases = {    
 
       # nixos
@@ -43,5 +35,13 @@
       sshem="sudo emacs -nw";
       smake="sudo make clean install";
     };
+
+    initExtra = ''
+      export KUBECONFIG=$HOME/.kube/config
+      export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
+      export KREW_ROOT=$HOME/.krew
+      export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
+    '';
+           
   };
 }
