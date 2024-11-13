@@ -26,7 +26,8 @@ in
         (import ./pipewire.nix)
         (import ./program.nix)
         # ++ [ (import ./../home/package/python.nix) ]
-        (import ./security.nix) 
+        (import ./security.nix)
+        (import ./bluetooth.nix)
         (import ./services.nix)
         (import ./system.nix) 
         (import ./user.nix) 

@@ -13,6 +13,7 @@
     cmake
     cmake
     cpio
+    dig
     discord
     dive
     docker
@@ -27,12 +28,15 @@
     gimp
     git
     glib
+    mixxx
+    yt-dlp
     glm
     gnome-session
     gnome-settings-daemon
     grim
     htop
     gnuplot
+    talosctl
     evince
     firefox
     feh
