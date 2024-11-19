@@ -6,16 +6,16 @@
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
-    virt-manager
-    virt-viewer
+    adwaita-icon-theme
+    docker
     spice
     spice-gtk
     spice-protocol
-    win-virtio
-    win-spice
-    gnome.adwaita-icon-theme
+    virt-manager
+    virt-viewer
     virtiofsd
-    docker
+    win-spice
+    win-virtio
   ];
 
   # Manage the virtualisation services

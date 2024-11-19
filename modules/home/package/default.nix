@@ -6,10 +6,13 @@
     let
       php = pkgs.php.buildEnv { extraConfig = "memory_limit = 2G"; };
     in
-    (with pkgs;
+      (with pkgs;
     [
+    adoptopenjdk-icedtea-web
     arduino-ide
+    bemenu
     brightnessctl
+    ciscoPacketTracer8
     cmake
     cmake
     cpio
@@ -17,68 +20,65 @@
     discord
     dive
     docker
-    openjdk
-    adoptopenjdk-icedtea-web
     docker-compose
+    dunst
     emacs
+    evince
     fastfetch
+    feh
+    firefox
     foot
     fprintd
     gcc
     gimp
     git
     glib
-    mixxx
-    yt-dlp
     glm
     gnome-session
     gnome-settings-daemon
+    gnuplot
     grim
     htop
-    gnuplot
-    talosctl
-    evince
-    firefox
-    feh
-    nautilus
-    nemo
-    viewnior
     hugo
+    hypridle
     hyprland
     hyprlock
-    hypridle
     hyprpaper
     imagemagick
     inkscape
     keepassxc
     killall
     kitty
+    kompose
     krita
     kubectl
-    dunst
     kubernetes
+    kubernetes-helm
     libinput-gestures
     libreoffice    
     macchina
     meson
     meson
     minikube
+    mixxx
     mullvad-vpn
+    nautilus
+    nemo
     networkmanagerapplet
     ninja
     nodejs
-    kubernetes-helm
     onboard
+    openjdk
     pavucontrol
-    ciscoPacketTracer8
     podman
     pywal
     qemu
-    signal-desktop
     redis
+    signal-desktop
     slurp
     stremio
     swww
+    talosctl
     texlive.combined.scheme-full
     udiskie
     udisks
@@ -86,21 +86,22 @@
     usbutils
     v4l-utils
     vcluster
+    viewnior
     vim
     waybar
     waylock
     wget
     where-is-my-sddm-theme
-    winetricks
     wineWowPackages.wayland
+    winetricks
     wireplumber
     wireshark
     wl-clipboard
     wmctrl
     wofi
     xapp
+    yt-dlp
     yubioath-flutter
-   bemenu
     ]
     ++ [
    nerdfonts
