@@ -74,6 +74,7 @@
     podman
     pywal
     qemu
+    signal-desktop
     slurp
     stremio
     swww
@@ -89,6 +90,8 @@
     waylock
     wget
     where-is-my-sddm-theme
+    winetricks
+    wineWowPackages.wayland
     wireplumber
     wireshark
     wl-clipboard
