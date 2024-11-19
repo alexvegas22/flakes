@@ -75,7 +75,7 @@
     pywal
     qemu
     signal-desktop
-    redis-cli
+    redis
     slurp
     stremio
     swww
