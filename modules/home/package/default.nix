@@ -10,6 +10,7 @@
     [
     adoptopenjdk-icedtea-web
     arduino-ide
+    awscli
     bemenu
     brightnessctl
     ciscoPacketTracer8
@@ -69,6 +70,7 @@
     nodejs
     onboard
     openjdk
+    openssl
     pavucontrol
     podman
     pywal
@@ -80,11 +82,13 @@
     swww
     talosctl
     texlive.combined.scheme-full
+    tmux
     udiskie
     udisks
     unzip
     usbutils
     v4l-utils
+    vault
     vcluster
     viewnior
     vim

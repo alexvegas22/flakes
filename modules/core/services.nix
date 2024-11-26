@@ -10,6 +10,11 @@
     blueman.enable = true;
     # Enable CUPS to print documents.
     printing.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
     openssh = {
       enable = true;
       ports = [ 22 ];
