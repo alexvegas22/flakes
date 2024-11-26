@@ -7,6 +7,7 @@
     udisks2.enable = true;
     pcscd.enable = true;
     mullvad-vpn.enable = true;
+    mongodb.enable = true;
     blueman.enable = true;
     # Enable CUPS to print documents.
     printing.enable = true;
