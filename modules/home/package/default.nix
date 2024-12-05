@@ -13,6 +13,8 @@
     awscli
     bemenu
     brightnessctl
+    btop
+    ceph
     ciscoPacketTracer8
     cmake
     cmake
@@ -56,6 +58,7 @@
     kubernetes
     kubernetes-helm
     libinput-gestures
+    libinput
     libreoffice    
     macchina
     meson
@@ -75,6 +78,7 @@
     podman
     pywal
     qemu
+    rbd
     redis
     signal-desktop
     slurp
