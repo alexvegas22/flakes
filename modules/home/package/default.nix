@@ -41,6 +41,7 @@
     gnome-settings-daemon
     gnuplot
     grim
+    ghostscript
     htop
     hugo
     hypridle
@@ -69,16 +70,18 @@
     nautilus
     nemo
     networkmanagerapplet
+    nfs-utils
     ninja
     nodejs
     onboard
     openjdk
     openssl
     pavucontrol
+    plantuml
     podman
+    python3
     pywal
     qemu
-    rbd
     redis
     signal-desktop
     slurp
