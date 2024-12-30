@@ -1,39 +1,24 @@
-{ inputs
-, nixpkgs
-, self
-, ...
-}:
-let
-  system = "x86_64-linux";
-  pkgs = import nixpkgs {
-    inherit system;
-    config.allowUnfree = true;
-  };
-  lib = nixpkgs.lib;
-in
+{ self, nixpkgs, inputs, username, host, ... }:
+
 {
-     
-  nixos = nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit self inputs; };
-    modules =
-      [
-        (import ./bootloader.nix) 
-        # ++ [ (import ./hardware.nix) ]
-        (import ./wireshark.nix)
-        (import ./xserver.nix) 
-        (import ./steam.nix)
-        (import ./network.nix) 
-        (import ./pipewire.nix)
-        (import ./program.nix)
-        # ++ [ (import ./../home/package/python.nix) ]
-        (import ./security.nix)
-        (import ./bluetooth.nix)
-        (import ./services.nix)
-        (import ./system.nix) 
-        (import ./user.nix) 
-        (import ./wayland.nix) 
-        (import ./virtualization.nix)
-        (import ./../../hosts/laptop/hardware-configuration.nix)      
-      ];
-      };
-  }
+
+  imports = [
+    ./bootloader.nix
+    #(import ./hardware.nix)
+    ./wireshark.nix
+    ./xserver.nix
+    ./steam.nix
+    ./network.nix
+    ./pipewire.nix
+    ./program.nix
+    ./security.nix
+    ./bluetooth.nix
+    ./services.nix
+    ./system.nix
+    ./user.nix
+    ./wayland.nix
+    ./virtualization.nix
+  ];
+  
+  
+}

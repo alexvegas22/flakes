@@ -15,8 +15,7 @@
     brightnessctl
     btop
     ceph
-    ciscoPacketTracer8
-    cmake
+    prusa-slicer
     cmake
     cpio
     dig

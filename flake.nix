@@ -8,20 +8,39 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprgrass = {
-      url = "github:horriblename/hyprgrass";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
-  outputs = {
-    self,
-      nixpkgs,
-      home-manager,
-      ... } @ inputs: {
+  outputs = { self, nixpkgs, ... } @ inputs:
+    let
+      username = "alex";
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      lib = nixpkgs.lib;
+    in
+    {
+  
+    # Import the default.nix file which should return a set with nixosConfigurations
+      nixosConfigurations = {
+        rugged = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/rugged ];
+          specialArgs = {
+            host = "rugged";
+            inherit self inputs username;
+          };
+        };
+        nixos = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/nixos ];
+          specialArgs = {
+            host = "nixos";
+            inherit self inputs username;
+          };
+        };
         
-    nixosConfigurations = import ./modules/core/default.nix {
-     inherit self nixpkgs inputs;
-    };
+      };
   };
 }
