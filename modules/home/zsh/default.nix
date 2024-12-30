@@ -1,9 +1,7 @@
-{ hostname
-, config
+{ config
 , pkgs
-, host
 , ...
-}: {
+} @ args: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -18,8 +16,8 @@
 
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      nbs = "sudo nixos-rebuild switch --flake ~/nixos-config .#${host}";
-
+      nbst = "sudo nixos-rebuild switch --flake ~/nixos-config#touch";
+      nbsr = "sudo nixos-rebuild switch --flake ~/nixos-config#rugged";
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
