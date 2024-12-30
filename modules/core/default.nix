@@ -18,7 +18,7 @@ in
     modules =
       [
         (import ./bootloader.nix) 
-        # ++ [ (import ./hardware.nix) ]
+        (import ./hardware.nix)
         (import ./wireshark.nix)
         (import ./xserver.nix) 
         (import ./steam.nix)
