@@ -1,6 +1,7 @@
 { hostname
 , config
 , pkgs
+, host
 , ...
 }: {
   programs.zsh = {
@@ -17,7 +18,7 @@
 
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      nbs = "sudo nixos-rebuild switch --flake ~/nixos-config";
+      nbs = "sudo nixos-rebuild switch --flake ~/nixos-config .#${host}";
 
       # python
       piv = "python -m venv .venv";

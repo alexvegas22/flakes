@@ -21,8 +21,6 @@
       lib = nixpkgs.lib;
     in
     {
-  
-    # Import the default.nix file which should return a set with nixosConfigurations
       nixosConfigurations = {
         rugged = nixpkgs.lib.nixosSystem {
           inherit system;
@@ -32,11 +30,11 @@
             inherit self inputs username;
           };
         };
-        nixos = nixpkgs.lib.nixosSystem {
+        touch = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/nixos ];
+          modules = [ ./hosts/touch ];
           specialArgs = {
-            host = "nixos";
+            host = "touch";
             inherit self inputs username;
           };
         };
