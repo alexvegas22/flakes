@@ -3,7 +3,7 @@
 , ...
 }: {
   home.packages =
-    let
+    let   
       php = pkgs.php.buildEnv { extraConfig = "memory_limit = 2G"; };
     in
       (with pkgs;
@@ -39,6 +39,7 @@
     gnome-session
     gnome-settings-daemon
     gnuplot
+    graphviz
     grim
     ghostscript
     htop
@@ -81,6 +82,7 @@
     python3
     pywal
     qemu
+    qt5.qtwayland
     redis
     signal-desktop
     slurp

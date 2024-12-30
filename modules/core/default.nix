@@ -1,10 +1,7 @@
-{ self, nixpkgs, inputs, username, host, ... }:
-
-{
-
+{ self, nixpkgs, inputs, username, host, ... }: {
   imports = [
     ./bootloader.nix
-    #(import ./hardware.nix)
+    ./hardware.nix
     ./wireshark.nix
     ./xserver.nix
     ./steam.nix
@@ -19,6 +16,4 @@
     ./wayland.nix
     ./virtualization.nix
   ];
-  
-  
 }
