@@ -49,7 +49,8 @@
     hyprlock
     hyprpaper
     imagemagick
-    inkscape
+    inkscape    
+    jq
     keepassxc
     killall
     kitty
@@ -66,6 +67,7 @@
     meson
     minikube
     mixxx
+    mongodb-compass
     mullvad-vpn
     nautilus
     nemo
