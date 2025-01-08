@@ -17,7 +17,7 @@
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
       nbst = "sudo nixos-rebuild switch --flake ~/nixos-config#touch";
-      nbsr = "sudo nixos-rebuild switch --flake ~/nixos-config#rugged";
+      nbsr = "sudo nixos-rebuild switch --flake ~/flakes#rugged";
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
