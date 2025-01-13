@@ -93,6 +93,7 @@
     talosctl
     texlive.combined.scheme-full
     tmux
+    traceroute
     udiskie
     udisks
     unzip
@@ -114,6 +115,7 @@
     wmctrl
     wofi
     xapp
+    xournalpp
     yt-dlp
     yubioath-flutter
     ]
