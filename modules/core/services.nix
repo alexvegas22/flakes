@@ -8,6 +8,8 @@
     pcscd.enable = true;
     mullvad-vpn.enable = true;
     blueman.enable = true;
+    xserver.wacom.enable = true;
+
     # Enable CUPS to print documents.
     printing.enable = true;
     avahi = {
