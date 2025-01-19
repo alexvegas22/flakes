@@ -14,7 +14,6 @@
     bemenu
     brightnessctl
     btop
-    chromium
     ceph
     prusa-slicer
     cmake
