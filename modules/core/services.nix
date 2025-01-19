@@ -8,8 +8,6 @@
     pcscd.enable = true;
     mullvad-vpn.enable = true;
     blueman.enable = true;
-    xserver.wacom.enable = true;
-
     # Enable CUPS to print documents.
     printing.enable = true;
     avahi = {
@@ -30,7 +28,7 @@
     };
     # Enable the GNOME Desktop Environment.
     displayManager.sddm.enable = true;
-    displayManager.sddm.theme = "where-is-my-sddm-theme";
+    displayManager.sddm.theme = "where_is_my_sddm_theme";
 
 
     udev.packages = [ pkgs.yubikey-personalization ];
