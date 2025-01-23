@@ -63,6 +63,7 @@
     libinput
     libreoffice    
     macchina
+    maven
     meson
     meson
     minikube

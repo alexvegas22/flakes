@@ -9,7 +9,7 @@
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = [ "git" "sudo" "docker" "kubectl"];
     };                  
     
     shellAliases = {    
@@ -19,7 +19,7 @@
       nbst = "sudo nixos-rebuild switch --flake ~/nixos-config#touch";
       nbsr = "sudo nixos-rebuild switch --flake ~/flakes#rugged";
       # python
-      piv = "python -m venv .venv";
+      pmv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
 
       # server
@@ -40,6 +40,9 @@
       export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
+      if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
+        source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+      fi
     '';
            
   };

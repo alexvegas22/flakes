@@ -8,10 +8,10 @@
       size = 12;
     };
     theme = {
-      name = "Gruvbox-Green-Dark";
+      name = "Gruvbox-Red-Dark";
       package = pkgs.gruvbox-gtk-theme.override {
         colorVariants = [ "dark" ];
-        themeVariants = [ "green" ];
+        themeVariants = [ "red" ];
         tweakVariants = [ "macos" ];
       };
     };

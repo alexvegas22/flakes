@@ -1,6 +1,8 @@
 { pkgs, ... }: {
-  programs.git.enable = true;
-  programs.git.userName = "Alexandre Baudouin Vegasm";
-  programs.git.userEmail = "alexrbvegas@gmail.com";
+  programs.git = {
+    enable = true;
+    userName = "Alexandre Baudouin Vegas";
+    userEmail = "alexrbvegas@gmail.com";
+  };
   home.packages = [ pkgs.gh ];
 }
