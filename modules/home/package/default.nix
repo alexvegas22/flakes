@@ -121,16 +121,15 @@
     yubioath-flutter
     ]
     ++ [
-   nerdfonts
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    dina-font
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      liberation_ttf
+      fira-code
+      fira-code-symbols
+      font-awesome
+      powerline-fonts
+      powerline-symbols
+      dina-font
     ]);
 }
