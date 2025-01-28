@@ -3,6 +3,7 @@
 {
   imports = [
     ./xdg-mimes.nix
+    ./fonts
     ./git
     ./foot
     ./zsh

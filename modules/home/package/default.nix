@@ -14,7 +14,6 @@
     bemenu
     brightnessctl
     btop
-    ceph
     prusa-slicer
     cmake
     cpio
@@ -76,6 +75,7 @@
     nfs-utils
     ninja
     nodejs
+    obs-studio
     onboard
     openjdk
     openssl
@@ -119,17 +119,5 @@
     xournalpp
     yt-dlp
     yubioath-flutter
-    ]
-    ++ [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      font-awesome
-      powerline-fonts
-      powerline-symbols
-      dina-font
     ]);
 }
