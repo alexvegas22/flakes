@@ -67,6 +67,7 @@
     meson
     minikube
     mixxx
+    mpv
     mongodb-compass
     mullvad-vpn
     nautilus
