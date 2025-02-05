@@ -6,12 +6,9 @@
 
 #+CAPTION: Screenshots
 #+ATTR_HTML: :width 600px
-[[file:.github/assets/screenshots/1.png]]
+[[file:.github/assets/screenshots/1.png]] 
 [[file:.github/assets/screenshots/2.png]]
-[[file:.github/assets/screenshots/3.png]]
-[[file:.github/assets/screenshots/4.png]]
-[[file:.github/assets/screenshots/5.png]]
-[[file:.github/assets/screenshots/hyprlock.png]]
+file:.github/assets/screenshots/3.png
 
 Screenshots last updated *2025-02-05*
 
@@ -36,5 +33,5 @@ Screenshots last updated *2025-02-05*
 
 * Credits
 Other NixOs configs that helped me structure my files
-** [[https://github.com/nomadics9/nixcfg][Nomdadics]]'s config
-** [[https://github.com/Frost-Phoenix/nixos-config][Frost-Pheonix]]'s config
+- [[https://github.com/nomadics9/nixcfg][Nomdadics]]'s config
+- [[https://github.com/Frost-Phoenix/nixos-config][Frost-Pheonix]]'s config
