@@ -42,6 +42,7 @@
     grim
     ghostscript
     htop
+    hyfetch
     hugo
     imagemagick
     inkscape    

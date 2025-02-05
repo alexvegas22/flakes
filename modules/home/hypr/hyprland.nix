@@ -102,7 +102,7 @@
       input = {
         kb_layout = "us";
         kb_variant = "intl";
-        kb_options = "compose:ralt,ctrl:nocaps";
+        kb_options = "ctrl:nocaps";
         follow_mouse = 1;
         sensitivity = 0;
         touchpad = {
