@@ -43,10 +43,6 @@
     ghostscript
     htop
     hugo
-    hypridle
-    hyprland
-    hyprlock
-    hyprpaper
     imagemagick
     inkscape    
     jq

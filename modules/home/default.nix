@@ -8,5 +8,6 @@
     ./foot
     ./zsh
     ./package
+    ./hypr
   ];
 }
