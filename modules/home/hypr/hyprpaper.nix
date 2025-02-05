@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.hyprpaper = {
+  services.hyprpaper = {
     enable = true;
     settings = {
       preload = [ "~/Images/wallpaper.png" ];

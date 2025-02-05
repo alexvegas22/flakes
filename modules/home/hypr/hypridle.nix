@@ -1,5 +1,7 @@
-{ pkgs, ... }: {
-  programs.hypridle = {
+{ config, pkgs, ... }:
+
+{
+  services.hypridle = {
     enable = true;
     settings = {
       general = {

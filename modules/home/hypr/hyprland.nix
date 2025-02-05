@@ -4,20 +4,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = [
-        ",preferred,auto,1"
-        "HDMI-A-1,1920x1080,auto,1"
-      ];
-
-      env = [
-        "QT_AUTO_SCREEN_SCALE_FACTOR=1"
-        "QT_QPA_PLATFORM=wayland;xcb"
-        "QT_QPA_PLATFORMTHEME=qt5ct"
-        "QT_SCALE_FACTOR=1"
-        "GDK_SCALE=1"
-        "MOZ_ENABLE_WAYLAND=1"
-      ];
-
       exec-once = [
         "emacs --daemon"
         "[workspace 9 silent] keepassxc"
@@ -32,6 +18,21 @@
         "hypridle"
         "otd-daemon"
       ];
+      
+      monitor = [
+        ",preferred,auto,1"
+        "HDMI-A-1,1920x1080,auto,1"
+      ];
+
+      env = [
+        "QT_AUTO_SCREEN_SCALE_FACTOR=1"
+        "QT_QPA_PLATFORM=wayland;xcb"
+        "QT_QPA_PLATFORMTHEME=qt5ct"
+        "QT_SCALE_FACTOR=1"
+        "GDK_SCALE=1"
+        "MOZ_ENABLE_WAYLAND=1"
+      ];
+
 
       xwayland = {
         force_zero_scaling = false;
@@ -53,13 +54,12 @@
         gaps_in = 1;
         gaps_out = 2;
         border_size = 1;
-        col = {
-          active_border = "rgba(555555ee) rgba(aa0000ee) 270deg";
-          inactive_border = "rgba(595959aa)";
-        };
+        "col.active_border"= "rgba(555555ee) rgba(aa0000ee) 270deg";
+        "col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
         allow_tearing = false;
         layout = "master";
+        "$mainMod" = "SUPER";
       };
 
       decoration = {
@@ -95,6 +95,8 @@
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
+        animate_manual_resizes = false;
+        middle_click_paste = false;
       };
 
       input = {
@@ -118,79 +120,76 @@
         long_press_delay = 400;
         edge_margin = 10;
       };
-      extraConfig = ''
-        $terminal = foot
-        $fileManager = pcmanfm
-        $menu = wofi --show drun
-        $browser = firefox
 
-        $mainMod = SUPER # Sets "Windows" key as main modifier
-
-        bind = ,XF86AudioRaiseVolume, exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1  
-        bind = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1  
-        bind = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle
-        bind = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle
-        bind = ,XF86MonBrightnessUp, exec, brightnessctl set +10%
-        bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
-        bind = $mainMod SHIFT, return, exec, $terminal
-        bind = $mainMod SHIFT, D, exec, discord
-        bind = $mainMod SHIFT, S, exec, signal-desktop
-        bind = $mainMod SHIFT, F, exec, $browser
-        bind = $mainMod SHIFT, K, exec, krita
-        bind = $mainMod, P, exec, $menu
-        bind = $mainMod SHIFT, E, exec, emacsclient -c
-        bind = , Print, exec, grim -g "$(slurp)" ~/Images/Screenshots/$(date +'%s_grim.png') && wl-copy < ~/Images/Screenshots/$(date +'%s_grim.png')
-        bind = $mainMod, Q , exec,~/.local/bin/wofi-power
-        bind = $mainMod SHIFT, L, exec, 
-        bind = $mainMod SHIFT, C, killactive,
-        bind = ,XF86Display , exec, hyprlock
-        bind = $mainMod, X, togglespecialworkspace, special
-        bind = $mainMod SHIFT, X, movetoworkspacesilent, special
-        bind = $mainMod, Return, layoutmsg, swapwithmaster
-        bind = $mainMod, j, layoutmsg, cycleprev  # Focus down
-        bind = $mainMod, k, layoutmsg, cyclenext  # Focus down
-        bind = $mainMod, i, layoutmsg, addmaster # Increment master windows
-        bind = $mainMod, d, layoutmsg, removemaster # Decrement master windows
-        bind = $mainMod, h, resizeactive, -100 0 
-        bind = $mainMod, l, resizeactive, 100 0 
-        bind = $mainMod, t, togglesplit  # Tiling layout
-        bind = $mainMod, f, togglefloating # Floating layout
-        bind = $mainMod, m, fullscreen # Monocle layout
-        bind = $mainMod, 0, workspace, 10  # Map to workspace 10 as an example
-        bind = $mainMod SHIFT, 0, movetoworkspace, 10
-        bind = $mainMod, comma, movefocus, prev  # Focus previous monitor
-        bind = $mainMod, period, movefocus, next # Focus next monitor
-        bind = $mainMod SHIFT, comma, movetoworkspace, -1  # Move window to previous monitor
-        bind = $mainMod SHIFT, period, movetoworkspace, +1 # Move window to next monitor
-        bind = $mainMod, 1, workspace, 1
-        bind = $mainMod, 2, workspace, 2
-        bind = $mainMod, 3, workspace, 3
-        bind = $mainMod, 4, workspace, 4
-        bind = $mainMod, 5, workspace, 5
-        bind = $mainMod, 6, workspace, 6
-        bind = $mainMod, 7, workspace, 7
-        bind = $mainMod, 8, workspace, 8
-        bind = $mainMod, 9, workspace, 9
-        bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
-        bind = $mainMod SHIFT, 2, movetoworkspacesilent, 2
-        bind = $mainMod SHIFT, 3, movetoworkspacesilent, 3
-        bind = $mainMod SHIFT, 4, movetoworkspacesilent, 4
-        bind = $mainMod SHIFT, 5, movetoworkspacesilent, 5
-        bind = $mainMod SHIFT, 6, movetoworkspacesilent, 6
-        bind = $mainMod SHIFT, 7, movetoworkspacesilent, 7
-        bind = $mainMod SHIFT, 8, movetoworkspacesilent, 8
-        bind = $mainMod SHIFT, 9, movetoworkspacesilent, 9
-        bind = $mainMod, period, workspace, e+1
-        bind = $mainMod, comma, workspace, e-1
-        bindm = $mainMod, mouse:272, movewindow
-        bindm = $mainMod, mouse:273, resizewindow
-
-        windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
-        windowrulev2 = workspace:special_workspace, title:(.*)(- TI-Nspire)$
-        windowrulev2 = float,  title:^(Unlock Database - KeePassXC)$
-        windowrulev2 = center, title:^(Unlock Database - KeePassXC)$
-
-        '';
+      bind = [
+        ",XF86AudioRaiseVolume, exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1"
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
+        ",XF86MonBrightnessUp, exec, brightnessctl set +10%"
+        ",XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        "$mainMod SHIFT, return, exec, foot"
+        "$mainMod SHIFT, D, exec, discord"
+        "$mainMod SHIFT, S, exec, signal-desktop"
+        "$mainMod SHIFT, F, exec, firefox"
+        "$mainMod SHIFT, K, exec, krita"
+        "$mainMod, P, exec, wofi --show drun"
+        "$mainMod SHIFT, E, exec, emacsclient -c"
+        ", Print, exec, grim -g \"$(slurp)\" ~/Images/Screenshots/$(date +'%s_grim.png') && wl-copy < ~/Images/Screenshots/$(date +'%s_grim.png')"
+        "$mainMod, Q , exec,~/.local/bin/wofi-power"
+        "$mainMod SHIFT, L, exec, "
+        "$mainMod SHIFT, C, killactive,"
+        ",XF86Display , exec, hyprlock"
+        "$mainMod, X, togglespecialworkspace, special"
+        "$mainMod SHIFT, X, movetoworkspacesilent, special"
+        "$mainMod, Return, layoutmsg, swapwithmaster"
+        "$mainMod, j, layoutmsg, cycleprev  # Focus down"
+        "$mainMod, k, layoutmsg, cyclenext  # Focus down"
+        "$mainMod, i, layoutmsg, addmaster # Increment master windows"
+        "$mainMod, d, layoutmsg, removemaster # Decrement master windows"
+        "$mainMod, h, resizeactive, -100 0 "
+        "$mainMod, l, resizeactive, 100 0 "
+        "$mainMod, t, togglesplit  # Tiling layout"
+        "$mainMod, f, togglefloating # Floating layout"
+        "$mainMod, m, fullscreen # Monocle layout"
+        "$mainMod, 0, workspace, 10  # Map to workspace 10 as an example"
+        "$mainMod SHIFT, 0, movetoworkspace, 10"
+        "$mainMod, comma, movefocus, prev  # Focus previous monitor"
+        "$mainMod, period, movefocus, next # Focus next monitor"
+        "$mainMod SHIFT, comma, movetoworkspace, -1  # Move window to previous monitor"
+        "$mainMod SHIFT, period, movetoworkspace, +1 # Move window to next monitor"
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
+        "$mainMod, 4, workspace, 4"
+        "$mainMod, 5, workspace, 5"
+        "$mainMod, 6, workspace, 6"
+        "$mainMod, 7, workspace, 7"
+        "$mainMod, 8, workspace, 8"
+        "$mainMod, 9, workspace, 9"
+        "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
+        "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
+        "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
+        "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
+        "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
+        "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
+        "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
+        "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
+        "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
+        "$mainMod, period, workspace, e+1"
+        "$mainMod, comma, workspace, e-1"
+      ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
+      
+      windowrulev2 = [
+        "suppressevent maximize, class:.*"
+        "workspace:special_workspace, title:(.*)(- TI-Nspire)$"
+        "float,  title:^(Unlock Database - KeePassXC)$"
+        "center, title:^(Unlock Database - KeePassXC)$"
+      ];
     };
   };
 }
