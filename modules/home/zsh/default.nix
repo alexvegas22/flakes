@@ -16,9 +16,9 @@
 
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      nbst = "sudo nixos-rebuild switch --flake ~/nixos-config#touch";
+      nbst = "sudo nixos-rebuild switch --flake ~/flakes#touch";
       nbsr = "sudo nixos-rebuild switch --flake ~/flakes#rugged";
-      update = "nix flake update --flake ~/nixos-config#touch" ;
+      update = "nix flake update --flake ~/flakes#touch" ;
       # python
       pmv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
@@ -38,7 +38,7 @@
 
     initExtra = ''
       export KUBECONFIG=$HOME/.kube/config
-      export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
+      export NIX_PATH=flakes=/home/alex/flakes:nixpkgs=nixpkgs
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
       if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
