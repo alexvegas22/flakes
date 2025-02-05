@@ -1,2 +1,40 @@
-* Flakes
-Flakes config for my system
+#+TITLE: V34L's Flakes
+#+AUTHOR: V34L
+#+DATE: 2025-02-04
+
+* Gallery
+
+#+CAPTION: Screenshots
+#+ATTR_HTML: :width 600px
+[[file:.github/assets/screenshots/1.png]]
+[[file:.github/assets/screenshots/2.png]]
+[[file:.github/assets/screenshots/3.png]]
+[[file:.github/assets/screenshots/4.png]]
+[[file:.github/assets/screenshots/5.png]]
+[[file:.github/assets/screenshots/hyprlock.png]]
+
+Screenshots last updated *2025-02-05*
+
+
+* Overview
+
+** Layout
+
+- [[file:flake.nix][flake.nix]] base of the configuration
+- [[file:hosts][hosts]] per-host configurations that contain machine specific configurations
+  - [[file:hosts/touch/][touch]] My touchscreen laptop's specific configuration
+  - [[file:hosts/rugged/][rugged]] My rugged laptop's specific configuration
+  - [[file:hosts/vm/][vm]] 🗄️ VM specific configuration (Not yet pushed)
+- [[file:modules][modules]] modularized NixOS configurations
+  - [[file:modules/core/][core]] Core NixOS configuration
+  - [[file:modules/home/][homes]] my [[https://github.com/nix-community/home-manager][Home-Manager]] config
+- [[file:flake/pkgs][pkgs]] Packages Build from source
+- [[file:wallpapers/][wallpapers]] wallpapers collection
+
+** ⌨️ Keybinds
+*_TODO_*
+
+* Credits
+Other NixOs configs that helped me structure my files
+** [[https://github.com/nomadics9/nixcfg][Nomdadics]]'s config
+** [[https://github.com/Frost-Phoenix/nixos-config][Frost-Pheonix]]'s config
