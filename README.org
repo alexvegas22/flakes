@@ -6,9 +6,9 @@
 
 #+CAPTION: Screenshots
 #+ATTR_HTML: :width 600px
-[[file:.github/assets/screenshots/1.png]] 
-[[file:.github/assets/screenshots/2.png]]
-file:.github/assets/screenshots/3.png
+file:./assets/screenshots/1.png
+file:./assets/screenshots/2.png
+file:./assets/screenshots/3.png
 
 Screenshots last updated *2025-02-05*
 
