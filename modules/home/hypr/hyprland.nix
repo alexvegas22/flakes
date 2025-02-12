@@ -137,7 +137,7 @@
         "$mainMod SHIFT, E, exec, emacsclient -c"
         ", Print, exec, grim -g \"$(slurp)\" ~/Images/Screenshots/$(date +'%s_grim.png') && wl-copy < ~/Images/Screenshots/$(date +'%s_grim.png')"
         "$mainMod, Q , exec,~/.local/bin/wofi-power"
-        "$mainMod SHIFT, L, exec, "
+        "$mainMod SHIFT, W, exec, xournalpp"
         "$mainMod SHIFT, C, killactive,"
         ",XF86Display , exec, hyprlock"
         "$mainMod, X, togglespecialworkspace, special"
