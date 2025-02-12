@@ -7,14 +7,20 @@
       name = "CaskaydiaCove Nerd Font";
       size = 12;
     };
+  
     theme = {
-      name = "Gruvbox-Red-Dark";
-      package = pkgs.gruvbox-gtk-theme.override {
+      name = "Colloid-Green-Dark-Gruvbox";
+      package = pkgs.colloid-gtk-theme.override {
         colorVariants = [ "dark" ];
-        themeVariants = [ "red" ];
-        tweakVariants = [ "macos" ];
+        themeVariants = [ "green" ];
+        tweaks = [
+          "gruvbox"
+          "rimless"
+          "float"
+        ];
       };
     };
+    
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme.override {
