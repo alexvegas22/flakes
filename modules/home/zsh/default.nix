@@ -37,8 +37,7 @@
     };
 
     initExtra = ''
-      export KUBECONFIG=$HOME/.kube/config
-      export NIX_PATH=flakes=/home/alex/flakes:nixpkgs=nixpkgs
+      export KUBECONFIG=$HOME/.kube/config      
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
       if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then

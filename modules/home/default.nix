@@ -7,6 +7,7 @@
     ./git
     ./foot
     ./zsh
+    ./scripts
     ./package
     ./hypr
   ];

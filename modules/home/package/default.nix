@@ -50,7 +50,6 @@
     keepassxc
     killall
     kitty
-    kompose
     krita
     kubectl
     kubernetes
@@ -58,11 +57,9 @@
     libinput-gestures
     libinput
     libreoffice    
-    macchina
     maven
     meson
     meson
-    minikube
     mixxx
     mpv
     mongodb-compass
@@ -106,7 +103,7 @@
     waylock
     wget
     where-is-my-sddm-theme
-    wineWowPackages.wayland
+    wineWowPackages.full
     winetricks
     wireplumber
     wireshark
