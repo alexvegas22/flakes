@@ -31,8 +31,8 @@
       # other
       ls="ls --color=auto";
       grep="grep --color=auto";
-      shem="emacs -nw";
-      sshem="sudo emacs -nw";
+      e="emacsclient -nw";
+      se="sudo emacsclient -nw";
       smake="sudo make clean install";
     };
 

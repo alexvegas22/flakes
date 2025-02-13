@@ -24,6 +24,7 @@
     docker-compose
     dunst
     emacs
+    wireguard-tools
     evince
     fastfetch
     feh
