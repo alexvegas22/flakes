@@ -4,6 +4,7 @@
     ./hardware.nix
     ./wireshark.nix
     ./xserver.nix
+    ./documentation.nix
     ./steam.nix
     ./network.nix
     ./pipewire.nix

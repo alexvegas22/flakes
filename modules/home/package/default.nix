@@ -57,7 +57,9 @@
     kubernetes-helm
     libinput-gestures
     libinput
-    libreoffice    
+    libreoffice
+    man-pages
+    man-pages-posix
     maven
     meson
     meson
