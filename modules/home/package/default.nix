@@ -31,6 +31,7 @@
     firefox
     foot
     fprintd
+    freecad
     gcc
     gimp
     git
