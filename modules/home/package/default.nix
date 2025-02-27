@@ -80,7 +80,6 @@
     v4l-utils
     vcluster
     viewnior
-    vim
     waybar
     waylock
     wget
