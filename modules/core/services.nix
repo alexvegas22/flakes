@@ -31,14 +31,6 @@
 
 
     udev.packages = [ pkgs.yubikey-personalization ];
-    emacs = {
-      enable = true;
-      defaultEditor = true;
-    };
-    emacs.package = with pkgs; (
-      (emacsPackagesFor emacs).emacsWithPackages (
-        epkgs: [ epkgs.vterm ]
-      )
-    );
+    
   };
 }

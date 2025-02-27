@@ -8,16 +8,13 @@
     in
       (with pkgs;
     [
-    adoptopenjdk-icedtea-web
-    arduino-ide
-    awscli
     bemenu
     brightnessctl
     btop
     prusa-slicer
-    cmake
     cpio
     dig
+    direnv
     discord
     dive
     docker
@@ -32,10 +29,7 @@
     foot
     fprintd
     freecad
-    gcc
     gimp
-    git
-    glib
     glm
     gnome-session
     gnome-settings-daemon
@@ -45,7 +39,6 @@
     ghostscript
     htop
     hyfetch
-    hugo
     imagemagick
     inkscape    
     jq
@@ -53,44 +46,30 @@
     killall
     kitty
     krita
-    kubectl
-    kubernetes
-    kubernetes-helm
     libinput-gestures
     libinput
     libreoffice
     man-pages
     man-pages-posix
-    maven
-    meson
-    meson
     mixxx
     mpv
-    mongodb-compass
     mullvad-vpn
     nautilus
     nemo
     networkmanagerapplet
     nfs-utils
-    ninja
-    nodejs
+    libnotify
     obs-studio
     onboard
-    openjdk
     openssl
     pavucontrol
-    plantuml
-    podman
-    python3
     pywal
     qemu
     qt5.qtwayland
-    redis
     signal-desktop
     slurp
     stremio
     swww
-    talosctl
     texlive.combined.scheme-full
     tmux
     traceroute
@@ -99,7 +78,6 @@
     unzip
     usbutils
     v4l-utils
-    vault
     vcluster
     viewnior
     vim

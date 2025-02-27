@@ -2,14 +2,16 @@
 
 {
   imports = [
-    ./xdg-mimes.nix
-    ./nemo.nix
+    ./editor
     ./fonts
-    ./git
     ./foot
-    ./zsh
-    ./scripts
-    ./package
+    ./git
     ./hypr
+    ./nemo.nix
+    ./package
+    ./programming
+    ./scripts
+    ./xdg-mimes.nix
+    ./zsh
   ];
 }
