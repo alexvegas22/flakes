@@ -20,7 +20,6 @@
     docker
     docker-compose
     dunst
-    emacs
     wireguard-tools
     evince
     fastfetch
