@@ -11,7 +11,6 @@
     bemenu
     brightnessctl
     btop
-    prusa-slicer
     cpio
     dig
     direnv
@@ -20,7 +19,6 @@
     docker
     docker-compose
     dunst
-    wireguard-tools
     evince
     fastfetch
     feh
@@ -28,6 +26,8 @@
     foot
     fprintd
     freecad
+    ghostscript
+    gifsicle
     gimp
     glm
     gnome-session
@@ -35,7 +35,6 @@
     gnuplot
     graphviz
     grim
-    ghostscript
     htop
     hyfetch
     imagemagick
@@ -45,8 +44,9 @@
     killall
     kitty
     krita
-    libinput-gestures
     libinput
+    libinput-gestures
+    libnotify
     libreoffice
     man-pages
     man-pages-posix
@@ -57,11 +57,11 @@
     nemo
     networkmanagerapplet
     nfs-utils
-    libnotify
     obs-studio
     onboard
     openssl
     pavucontrol
+    prusa-slicer
     pywal
     qemu
     qt5.qtwayland
@@ -71,6 +71,8 @@
     swww
     texlive.combined.scheme-full
     tmux
+    tor
+    tor-browser
     traceroute
     udiskie
     udisks
@@ -81,10 +83,12 @@
     viewnior
     waybar
     waylock
+    wf-recorder
     wget
     where-is-my-sddm-theme
     wineWowPackages.full
     winetricks
+    wireguard-tools
     wireplumber
     wireshark
     wl-clipboard
@@ -94,5 +98,6 @@
     xournalpp
     yt-dlp
     yubioath-flutter
+    zenity
     ]);
 }

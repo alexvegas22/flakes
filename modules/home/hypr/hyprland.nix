@@ -133,6 +133,7 @@
         "$mainMod SHIFT, S, exec, signal-desktop"
         "$mainMod SHIFT, F, exec, firefox"
         "$mainMod SHIFT, K, exec, krita"
+        "$mainMod SHIFT, R, exec, record"
         "$mainMod, P, exec, wofi --show drun"
         "$mainMod SHIFT, E, exec, emacsclient -c"
         ", Print, exec, grim -g \"$(slurp)\" ~/Images/Screenshots/$(date +'%s_grim.png') && wl-copy < ~/Images/Screenshots/$(date +'%s_grim.png')"
