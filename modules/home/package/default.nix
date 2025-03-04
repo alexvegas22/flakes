@@ -98,6 +98,7 @@
     xournalpp
     yt-dlp
     yubioath-flutter
+    zen
     zenity
     ]);
 }
