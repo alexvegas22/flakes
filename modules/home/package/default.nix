@@ -2,12 +2,7 @@
 , pkgs
 , ...
 }: {
-  home.packages =
-    let   
-      php = pkgs.php.buildEnv { extraConfig = "memory_limit = 2G"; };
-    in
-      (with pkgs;
-    [
+  home.packages = (with pkgs; [
     bemenu
     brightnessctl
     btop
@@ -63,6 +58,7 @@
     pavucontrol
     prusa-slicer
     pywal
+    qbittorrent
     qemu
     qt5.qtwayland
     signal-desktop
