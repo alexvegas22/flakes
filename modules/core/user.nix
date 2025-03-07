@@ -10,6 +10,9 @@ let
   packages = with pkgs; [
     zsh
   ];
+  hostname = builtins.getEnv "HOSTNAME";
+  homeModule = if hostname == "laptop" then ../../modules/home/laptop-default.nix else if hostname == "desktop" then ../../modules/home/desktop-default.nix else ../../modules/home;
+
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
@@ -20,7 +23,7 @@ in
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs; };
     users.${username} = {
-      imports = [ (import ../../modules/home) ];
+      imports = [ (import homeModule) ];
       home.username = username;
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";
@@ -36,5 +39,5 @@ in
     shell = pkgs.zsh;
   };
   users.users.root.initialPassword = initialPassword;
-  nix.settings.allowed-users = [ "alex" ];
+  nix.settings.allowed-users = [ username ];
 }
