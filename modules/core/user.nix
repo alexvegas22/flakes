@@ -21,7 +21,7 @@ in
     backupFileExtension = "backup";
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs name email; };
+    extraSpecialArgs = { inherit inputs email; };
     users.${username} = {
       imports = [ (import homeModule) ];
       home.username = username;

@@ -1,8 +1,8 @@
 { pkgs, name, email, ... }: {
   programs.git = {
     enable = true;
-    userName = name;
-    userEmail = email;
+    userName = "";
+    userEmail = "";
   };
   home.packages = [ pkgs.gh ];
 }

@@ -83,10 +83,12 @@ get_details() {
 set_details() {
     sed -i -e "s/name = \".*\";/name = \"$name\";/g" ./modules/core/user.nix
     sed -i -e "s/email = \".*\";/email = \"$email\";/g" ./modules/core/user.nix
+    sed -i -e "s/userName = \".*\";/name = \"$name\";/g" ./modules/home/git/default.nix
+    sed -i -e "s/userEmail = \".*\";/email = \"$email\";/g" ./modules/home/git/default.nix
 }
 
 get_host() {
-    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}D${NORMAL}]esktop, [${YELLOW}L${NORMAL}]aptop or [${YELLOW}V${NORMAL}]irtual machine: "
+    echo -en "Choose a ${GREEN}host${NORMAL} - [${YELLOW}D${NORMAL}]esktop, [${YELLOW}L${NORMAL}]aptop, [${YELLOW}T${NORMAL}]ouch or [${YELLOW}V${NORMAL}]irtual machine: "
     read -n 1 -r
     echo
 
@@ -94,6 +96,8 @@ get_host() {
         HOST='desktop'
     elif [[ $REPLY =~ ^[Ll]$ ]]; then
         HOST='laptop'
+    elif [[ $REPLY =~ ^[Tl]$ ]]; then
+        HOST='touch'
     elif [[ $REPLY =~ ^[Vv]$ ]]; then
         HOST='vm'
     else
@@ -124,7 +128,7 @@ install() {
 
     # Get the hardware configuration
     echo -e "Copying ${MAGENTA}/etc/nixos/hardware-configuration.nix${NORMAL} to ${MAGENTA}./hosts/${HOST}/${NORMAL}\n"
-    mkdir
+
     cp /etc/nixos/hardware-configuration.nix hosts/${HOST}/hardware-configuration.nix
 
     # Last Confirmation
