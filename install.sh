@@ -83,8 +83,8 @@ get_details() {
 set_details() {
     sed -i -e "s/name = \".*\";/name = \"$name\";/g" ./modules/core/user.nix
     sed -i -e "s/email = \".*\";/email = \"$email\";/g" ./modules/core/user.nix
-    sed -i -e "s/userName = \".*\";/name = \"$name\";/g" ./modules/home/git/default.nix
-    sed -i -e "s/userEmail = \".*\";/email = \"$email\";/g" ./modules/home/git/default.nix
+    sed -i -e "s/userName = \".*\";/userName = \"$name\";/g" ./modules/home/git/default.nix
+    sed -i -e "s/userEmail = \".*\";/userEmail = \"$email\";/g" ./modules/home/git/default.nix
 }
 
 get_host() {

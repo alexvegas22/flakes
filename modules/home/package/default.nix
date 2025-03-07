@@ -30,6 +30,7 @@
     gnuplot
     graphviz
     grim
+    home-manager
     htop
     hyfetch
     imagemagick

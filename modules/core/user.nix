@@ -4,8 +4,8 @@
 , ...
 }:
 let
-  name = "Alex Vegas";
-  email = "v34l@proton.me";
+  name = "Alexandre Baudouin Vegas";
+  email = "alexrbvegas@gmail.com";
   initialPassword = "root";
   packages = with pkgs; [
     zsh
