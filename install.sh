@@ -37,7 +37,8 @@ __/\\\________/\\\_____/\\\\\\\\\\_____________/\\\_____/\\\_____________
      ____\//\\\/\\\_______________\//\\\__/\\\\\\\\\\\\\\\\_\/\\\_____________                  
       _____\//\\\\\_______/\\\______/\\\__\///////////\\\//__\/\\\_____________                 
        ______\//\\\_______\///\\\\\\\\\/_____________\/\\\____\/\\\\\\\\\\\\\\\_                
-        _______\///__________\/////////_______________\///_____\///////////////__               
+        _______\///__________\/////////_______________\///_____\///////////////__
+           
 __/\\\\\\\\\\\\\\\__/\\\\\\_____________________________________________________________        
  _\/\\\///////////__\////\\\____________________/\\\_____________________________________       
   _\/\\\________________\/\\\___________________\/\\\_____________________________________      
@@ -64,8 +65,24 @@ get_username() {
 }
 
 set_username() {
-    sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./flake.nix
-    sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./modules/home/audacious.nix
+    sed -i -e "s/username = \".*\";/username = \"$username\";/g" ./flake.nix
+}
+
+
+get_details() {
+    echo -en "Enter your$GREEN name$NORMAL : $YELLOW"
+    read name
+    echo -en "$NORMAL"
+    echo -en "Enter your$GREEN email$NORMAL : $YELLOW"
+    read email
+    echo -en "$NORMAL"
+    echo -en "Use$YELLOW "$name"$NORMAL as ${GREEN}name${NORMAL} and $YELLOW "$email"$NORMAL as ${GREEN}email${NORMAL} ? "
+    confirm
+}
+
+set_details() {
+    sed -i -e "s/name = \".*\";/name = \"$name\";/g" ./modules/core/user.nix
+    sed -i -e "s/email = \".*\";/email = \"$email\";/g" ./modules/core/user.nix
 }
 
 get_host() {
@@ -99,11 +116,11 @@ install() {
     echo -e "    - ${MAGENTA}~/Images/Screenshots${NORMAL}"
     mkdir -p ~/Music
     mkdir -p ~/Documents
-    mkdir -p ~/Images/Screenshotss
-    mkdir -p ~/Images/Wallpaperss
+    mkdir -p ~/Images/Screenshots
+    mkdir -p ~/Images/Wallpapers
     # Copy the wallpapers
     echo -e "Copying all ${MAGENTA}wallpapers${NORMAL}"
-    cp -r wallpapers/* ~/Images/wallpapers
+    cp -r wallpapers/* ~/Images/Wallpapers
 
     # Get the hardware configuration
     echo -e "Copying ${MAGENTA}/etc/nixos/hardware-configuration.nix${NORMAL} to ${MAGENTA}./hosts/${HOST}/${NORMAL}\n"
@@ -126,6 +143,8 @@ main() {
 
     get_username
     set_username
+    get_details
+    set_details
     get_host
 
     install

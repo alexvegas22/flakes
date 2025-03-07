@@ -13,7 +13,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
-      username = "alex";
+      username = "v34l";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;

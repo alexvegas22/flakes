@@ -1,11 +1,11 @@
 { pkgs
 , inputs
+, username
 , ...
 }:
 let
-  name = "Alexandre Baudouin Vegas";
-  username = "alex";
-  email = "alexrbvegas@gmail.com";
+  name = "Alex Vegas";
+  email = "v34l@proton.me";
   initialPassword = "root";
   packages = with pkgs; [
     zsh
@@ -21,7 +21,7 @@ in
     backupFileExtension = "backup";
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs name email; };
     users.${username} = {
       imports = [ (import homeModule) ];
       home.username = username;
