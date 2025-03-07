@@ -7,5 +7,6 @@
     openjdk
     python3
     go
+    gopls
   ];
 }
