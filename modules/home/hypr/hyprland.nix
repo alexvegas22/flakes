@@ -9,13 +9,13 @@
         "[workspace 9 silent] keepassxc"
         "[workspace 8 silent] mullvad-vpn"
         "[workspace 3 silent] discord"
-        "[workspace 2 silent] emacsclient -c"
-        "zen"
+        "[workspace 3 silent] zen"
         "waybar & hyprpaper & dunst"
         "nm-applet -indicator"
         "blueman-manager -indicator"
         "libinput-gestures"
         "hypridle"
+        "[workspace 2 silent] emacsclient -c"
         "otd-daemon"
       ];
       

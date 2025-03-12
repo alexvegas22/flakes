@@ -25,7 +25,7 @@
 
       # server
       serv="ssh serv@192.168.0.30";
-      v34l="ssh alex@v34l.com";
+      v34l="ssh -p 2222 alex@v34l.com";
       git-v34l="ssh git@v34l.com";
 
       # other
