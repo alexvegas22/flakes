@@ -50,7 +50,6 @@
     monero-gui
     monero-cli
     mpv
-    mullvad-vpn
     nautilus
     nemo
     networkmanagerapplet
@@ -61,7 +60,6 @@
     pavucontrol
     prusa-slicer
     pywal
-    qbittorrent
     qemu
     qt5.qtwayland
     signal-desktop
@@ -70,8 +68,6 @@
     swww
     texlive.combined.scheme-full
     tmux
-    tor
-    tor-browser
     traceroute
     udiskie
     udisks

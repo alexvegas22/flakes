@@ -7,6 +7,7 @@
     ./foot
     ./git
     ./hypr
+    ./net
     ./zen-browser
     ./nemo.nix
     ./package
