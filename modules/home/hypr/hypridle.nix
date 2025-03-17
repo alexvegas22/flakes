@@ -13,6 +13,8 @@
       listener = {
         timeout = 1800;
         on-timeout = "systemctl suspend";
+        on-battery-timeout = 1800;
+        on-plugged-timeout = 0; 
       };
     };
   };

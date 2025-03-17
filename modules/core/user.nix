@@ -16,6 +16,10 @@ let
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
+  environment.sessionVariables = {
+    WAYLAND_DISPLAY = "wayland-1";
+  };
+
   programs.zsh.enable = true;
   home-manager = {
     backupFileExtension = "backup";

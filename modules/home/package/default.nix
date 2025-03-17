@@ -47,6 +47,8 @@
     man-pages
     man-pages-posix
     mixxx
+    monero-gui
+    monero-cli
     mpv
     mullvad-vpn
     nautilus
