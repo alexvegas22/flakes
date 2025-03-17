@@ -11,7 +11,7 @@ let
     zsh
   ];
   hostname = builtins.getEnv "HOSTNAME";
-  homeModule = if hostname == "laptop" then ../../modules/home/laptop-default.nix else if hostname == "desktop" then ../../modules/home/desktop-default.nix else ../../modules/home/default.nix;
+  homeModule = if hostname == "laptop" then ../../modules/home/laptop-default.nix else if hostname == "rugged" then ../../modules/home/desktop-default.nix else ../../modules/home/default.nix;
 
 in
 {
