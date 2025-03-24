@@ -53,6 +53,7 @@
     nautilus
     nemo
     networkmanagerapplet
+    brlaser
     nfs-utils
     obs-studio
     onboard

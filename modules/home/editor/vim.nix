@@ -3,7 +3,6 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      vim-airline
       vim-fugitive
       vim-commentary
     ];

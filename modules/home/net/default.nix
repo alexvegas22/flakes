@@ -4,11 +4,11 @@
   home.packages = (with pkgs; [
     i2p
     mullvad-vpn
-    onionshare
     onionshare-gui
     qbittorrent
     shallot
     tor
+    torsocks
     tor-browser
   ]);
 
