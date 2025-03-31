@@ -6,7 +6,6 @@
     mullvad-vpn
     onionshare-gui
     qbittorrent
-    shallot
     tor
     torsocks
     tor-browser
