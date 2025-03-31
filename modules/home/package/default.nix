@@ -50,6 +50,7 @@
     monero-gui
     monero-cli
     mpv
+    musescore
     nautilus
     nemo
     networkmanagerapplet
