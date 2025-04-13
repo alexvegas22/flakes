@@ -13,22 +13,6 @@
       enable = true;
       enableIPv6 = true;
       externalInterface = "wlp108s0";
-
-    };
-    
-    wireguard.interfaces = {
-      wg0 = {
-        privateKeyFile = "/etc/wireguard/client_privatekey";
-        ips = [ "192.168.1.2/24" ];
-        peers = [
-          {
-            publicKey = "QVUxPaEFy0X9th7AhhOw/BHqxeLfapSxXdjHfdqhq28=";
-            endpoint = "v34l.com:51820";
-            allowedIPs = [ "0.0.0.0/0" ];
-            persistentKeepalive = 25;
-          }
-        ];
-      };
     };
   };
 

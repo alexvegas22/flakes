@@ -5,6 +5,7 @@
     enable = true;
     settings = {
       exec-once = [
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "emacs --daemon"
         "[workspace 9 silent] keepassxc"
         "[workspace 8 silent] mullvad-vpn"
@@ -31,6 +32,12 @@
         "QT_SCALE_FACTOR=1"
         "GDK_SCALE=1"
         "MOZ_ENABLE_WAYLAND=1"
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION=1"
+        "GDK_BACKEND=wayland,x11"
+        "SDL_VIDEODRIVER=wayland"
+        "CLUTTER_BACKEND=wayland"
+        "MOZ_ENABLE_WAYLAND=1"
+        "DISPLAY=:0"
       ];
 
 

@@ -37,12 +37,17 @@
     };
 
     initExtra = ''
-      export KUBECONFIG=$HOME/.kube/config      
+      export KUBECONFIG=$HOME/.kube/config
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
       if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
         source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
       fi
+      if [ -f '/home/alex/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/alex/Downloads/google-cloud-sdk/path.zsh.inc';
+      fi
+
+      if [ -f '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
     '';
            
   };

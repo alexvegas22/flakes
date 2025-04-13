@@ -18,6 +18,7 @@ in
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   environment.sessionVariables = {
     WAYLAND_DISPLAY = "wayland-1";
+    NIXOS_OZONE_WL = "1";
   };
 
   programs.zsh.enable = true;
