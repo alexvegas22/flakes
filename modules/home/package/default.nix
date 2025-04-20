@@ -17,7 +17,6 @@
     evince
     fastfetch
     feh
-    firefox
     foot
     fprintd
     freecad
@@ -66,7 +65,6 @@
     slurp
     stremio
     swww
-    texlive.combined.scheme-full
     tmux
     traceroute
     udiskie
