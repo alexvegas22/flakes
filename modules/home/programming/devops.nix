@@ -5,6 +5,5 @@
     kubernetes
     kubernetes-helm
     podman
-    vault
   ];
 }
