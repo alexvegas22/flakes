@@ -46,12 +46,10 @@
     libreoffice
     man-pages
     man-pages-posix
-    mixxx
     monero-gui
     monero-cli
     mpv
     musescore
-    nautilus
     nemo
     networkmanagerapplet
     brlaser

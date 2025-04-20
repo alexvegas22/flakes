@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.emacs = {
     enable = true;
+    package = pkgs.emacs-pgtk;
     extraPackages = epkgs: with epkgs; [
       vterm
       lsp-mode
@@ -8,14 +9,10 @@
       tree-sitter
       tree-sitter-langs
 
-      (tree-sitter-grammars.override {
-        grammars = [
-          "tsx"
-          "python"
-          "go"
-          "java"
-        ];
-      })
+      pkgs.tree-sitter-grammars.tree-sitter-tsx
+      pkgs.tree-sitter-grammars.tree-sitter-python
+      pkgs.tree-sitter-grammars.tree-sitter-go
+      pkgs.tree-sitter-grammars.tree-sitter-java
     ];
   };
 

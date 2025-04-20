@@ -3,6 +3,15 @@
 , ...
 }: {
   home.packages = (with pkgs; [
-    texlive.combined.scheme-full
-    ]);
+    (texlive.combine {
+      inherit (texlive) scheme-medium
+        latexmk
+        physics
+        amsmath
+        babel
+        siunitx
+        mathtools
+        xcolor;
+    })
+  ]);
 }
