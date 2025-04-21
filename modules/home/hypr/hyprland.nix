@@ -6,7 +6,7 @@
     settings = {
       exec-once = [
         "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "emacs --daemon"
+        "emacs --daemon && sleep 1 && emacsclient -c -a ''"
         "[workspace 9 silent] keepassxc"
         "[workspace 8 silent] mullvad-vpn"
         "[workspace 3 silent] discord"
