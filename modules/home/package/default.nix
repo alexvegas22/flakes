@@ -33,9 +33,10 @@
     htop
     hyfetch
     imagemagick
-    inkscape    
+    inkscape
     jq
     keepassxc
+    keymapp
     killall
     kitty
     krita

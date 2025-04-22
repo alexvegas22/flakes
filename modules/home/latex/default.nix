@@ -15,14 +15,16 @@
         graphics
         wrapfig
         caption
-        subcaption
         listings
         minted
         ulem
         enumitem
         footmisc
+        sectsty
         parskip
         csquotes
+        titlesec
+        capt-of
         biblatex
         physics
         amsmath
