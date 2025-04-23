@@ -91,6 +91,7 @@ in
   xdg.mimeApps.defaultApplications = associations;
   home.packages = with pkgs; [ junction ];
   home.sessionVariables = {
+    BROWSER = "zen";
     # prevent wine from creating file associations
     WINEDLLOVERRIDES = "winemenubuilder.exe=d";
   };

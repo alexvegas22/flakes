@@ -7,8 +7,8 @@
     hugo
     jq
     mongodb-compass
-    nyxt
     plantuml
+    figma-linux
     qemu
     redis
     rustc
