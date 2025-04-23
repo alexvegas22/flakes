@@ -8,7 +8,6 @@
     jq
     mongodb-compass
     plantuml
-    figma-linux
     qemu
     redis
     rustc
