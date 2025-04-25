@@ -9,7 +9,7 @@
     ./hypr
     ./waybar
     ./nemo.nix
-    ./package
+    ./packages.nix
     ./scripts
     ./xdg-mimes.nix
     ./zen-browser

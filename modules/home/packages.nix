@@ -13,7 +13,6 @@
     dive
     docker
     docker-compose
-    dunst
     evince
     fastfetch
     feh

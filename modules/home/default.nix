@@ -13,7 +13,7 @@
     ./net
     ./zen-browser
     ./nemo.nix
-    ./package
+    ./packages.nix
     ./programming
     ./scripts
     ./xdg-mimes.nix
