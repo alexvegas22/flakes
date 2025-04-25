@@ -15,11 +15,17 @@
       options = "--delete-older-than 7d";
     };
   };
-  
+
   environment.systemPackages = with pkgs; [
     wget
     git
   ];
+
+  environment.sessionVariables = {
+    WAYLAND_DISPLAY = "wayland-1";
+    NIXOS_OZONE_WL = "1";
+  };
+
 
   time.timeZone = "America/Montreal";
   i18n.defaultLocale = "en_US.UTF-8";
