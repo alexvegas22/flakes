@@ -1,26 +1,21 @@
 { pkgs, config, ... }:
 {
 
-  gtk = {
+  gtk3 = {
     enable = true;
     font = {
       name = "CaskaydiaCove Nerd Font";
-      size = 12;
+      size = 10;
     };
-  
+
     theme = {
-      name = "Colloid-Green-Dark-Gruvbox";
+      name = "Colloid-Red-Dark";
       package = pkgs.colloid-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        themeVariants = [ "green" ];
-        tweaks = [
-          "gruvbox"
-          "rimless"
-          "float"
-        ];
+        colorVariants = ["red"];
+        tweaks = ["gruvbox" "rimless"];
       };
     };
-    
+
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme.override {

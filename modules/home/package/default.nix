@@ -75,7 +75,6 @@
     v4l-utils
     vcluster
     viewnior
-    waybar
     waylock
     wf-recorder
     wget

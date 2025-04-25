@@ -8,6 +8,7 @@
     ./git
     ./hypr
     ./net
+    ./waybar
     ./zen-browser
     ./nemo.nix
     ./package

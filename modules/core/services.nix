@@ -14,6 +14,7 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+    logind.extraConfig = "HandlePowerKey=ignore";
     openssh = {
       enable = true;
       ports = [ 22 ];
@@ -29,8 +30,6 @@
     displayManager.sddm.enable = true;
     displayManager.sddm.theme = "where_is_my_sddm_theme";
 
-
     udev.packages = [ pkgs.yubikey-personalization ];
-    
   };
 }

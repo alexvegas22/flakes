@@ -7,6 +7,8 @@
     ./foot
     ./git
     ./hypr
+    ./waybar
+    ./swaync
     ./latex
     ./net
     ./zen-browser
