@@ -1,26 +1,30 @@
 { pkgs, config, ... }:
 {
 
-  gtk3 = {
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
     enable = true;
-    font = {
-      name = "CaskaydiaCove Nerd Font";
-      size = 10;
-    };
 
     theme = {
-      name = "Colloid-Red-Dark";
-      package = pkgs.colloid-gtk-theme.override {
-        colorVariants = ["red"];
-        tweaks = ["gruvbox" "rimless"];
-      };
+      package = pkgs.flat-remix-gtk;
+      name = "Flat-Remix-GTK-Grey-Darkest";
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override {
-        color = "black";
-      };
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      name = "CaskaydiaCove Nerd Font";
+      size = 11;
     };
   };
 }

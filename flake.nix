@@ -58,21 +58,20 @@
 
         };
 
-        homeConfigurations = {
-          inherit username;
+        # homeConfigurations = {
+        #   inherit username;
 
-          touch = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            modules = [
-              {
-                home.username = username;
-                imports = [ (import ./modules/home/default.nix) ];
-                home.homeDirectory = "/home/${username}";
-                home.stateVersion = "24.05";
-              }
-            ];
-          };
-        };
-
+        #   touch = home-manager.lib.homeManagerConfiguration {
+        #     inherit pkgs;
+        #     modules = [
+        #       {
+        #         home.username = username;
+        #         imports = [ (import ./modules/home/default.nix) ];
+        #         home.homeDirectory = "/home/${username}";
+        #         home.stateVersion = "24.05";
+        #       }
+        #     ];
+        #   };
+        # };
       };
 }

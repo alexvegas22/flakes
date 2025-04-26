@@ -4,31 +4,35 @@
     settings = [
       {
         "layer" = "top";
-        "position" = "top";
-        "height" = 22;
+        "position" = "bottom";
 
         "modules-left" = [
-          "tray"
+          "hyprland/workspaces"
         ];
+
         "modules-center" = [
           "hyprland/window"
         ];
+
         "modules-right" = [
-          "clock"
+          "tray"
+          "temperature"
+          "cpu"
+          "memory"
+          "pulseaudio"
+          "battery"
           "network"
+          "clock"
         ];
+
+        "hyprland/workspaces" = {
+          "disable-scroll" = true;
+          "format" = "{name}";
+        };
 
         "clock" = {
           "interval" = 10;
           "format" = "{:%a %d %B %H:%M}";
-          "tooltip" = false;
-        };
-
-        "custom/keyboard-layout" = {
-          "exec" = "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4";
-          "interval" = 30;
-          "format" = "  {}";
-          "signal" = 1;
           "tooltip" = false;
         };
 
@@ -43,21 +47,6 @@
         "tray" = {
           "icon-size" = 21;
           "spacing" = 10;
-        };
-      }
-      {
-        "layer" = "top";
-        "position" = "bottom";
-
-        "modules-left" = [];
-        "modules-center" = [
-          "hyprland/workspaces"
-        ];
-        "modules-right" = ["temperature" "cpu" "memory" "pulseaudio" "battery"];
-
-        "hyprland/workspaces" = {
-          "disable-scroll" = true;
-          "format" = "{name}";
         };
 
         "pulseaudio" = {
@@ -75,20 +64,6 @@
             "default" = ["" ""];
           };
           "on-click" = "pavucontrol";
-        };
-
-        "temperature" = {
-          "critical-threshold" = 80;
-          "interval" = 5;
-          "format" = "{icon}  {temperatureC}°C";
-          "format-icons" = [
-            ""
-            ""
-            ""
-            ""
-            ""
-          ];
-          "tooltip" = true;
         };
 
         "battery" = {
@@ -116,7 +91,7 @@
             "warning" = 80;
             "critical" = 95;
           };
-          "format" = "󰍛 {usage}󰏰";
+          "format" = "󰍛 {usage}%";
         };
 
         "memory" = {
