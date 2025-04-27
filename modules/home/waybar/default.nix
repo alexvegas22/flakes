@@ -40,8 +40,8 @@
           "format-ethernet" ="";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Error";
-          "tooltip-format-wifi" = "{essid} ({signalStrength}%)  \n {ipaddr}";
-          "tooltip-format-ethernet" = "{ifname} 🖧 \n {ipaddr}";
+          "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n{ipaddr}";
+          "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
           "on-click" = "foot nm-connection-editor";
         };
         "bluetooth" = {

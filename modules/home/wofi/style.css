@@ -21,19 +21,17 @@
 
 #window {
     border: 1px solid @color1;
-    border-radius: 10px;
 }
 
 #outer-box {
     background-color: @background;
     border: 1px solid @color0;
-    border-radius: 10px;
 }
 
 #input{
     margin: 1rem;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: @text;
     background-color: alpha(@color3,0.3);
 }
@@ -42,7 +40,7 @@
     margin: 0.25rem 0.75rem 0.25rem 0.75rem;
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     color: @text;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #entry:selected {

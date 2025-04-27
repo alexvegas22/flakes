@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/Images/wallpaper.png" ];
-      wallpaper = [ ",~/Images/wallpaper.png" ];
+      preload = [ "~/Images/Wallpapers/wallpaper.jpg" ];
+      wallpaper = [ ",~/Images/Wallpapers/wallpaper.jpg" ];
       splash = false;
     };
   };
