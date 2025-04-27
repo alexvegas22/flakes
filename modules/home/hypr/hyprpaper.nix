@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       preload = [ "~/Images/wallpaper.png" ];
-      wallpaper = [ "eDP-1,~/Images/wallpaper.png" ];
+      wallpaper = [ ",~/Images/wallpaper.png" ];
       splash = false;
     };
   };
