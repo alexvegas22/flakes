@@ -14,6 +14,7 @@
     docker
     docker-compose
     evince
+    hyprpicker
     fastfetch
     feh
     foot

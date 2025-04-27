@@ -4,106 +4,114 @@
     settings = [
       {
         "layer" = "top";
-        "position" = "bottom";
-
-        "modules-left" = [
-          "hyprland/workspaces"
-        ];
-
-        "modules-center" = [
-          "hyprland/window"
-        ];
-
-        "modules-right" = [
-          "tray"
-          "temperature"
-          "cpu"
-          "memory"
-          "pulseaudio"
-          "battery"
-          "network"
-          "clock"
-        ];
+        "position" = "top";
+        "reload_style_on_change"= true;
+        "modules-left" = ["custom/notification" "clock" "tray"];
+        "modules-center"= ["hyprland/workspaces"];
+        "modules-right"= ["group/expand" "bluetooth" "network" "battery"];
 
         "hyprland/workspaces" = {
-          "disable-scroll" = true;
-          "format" = "{name}";
+          "persistent-workspaces" = {
+            "*" = [ 1 2 3 4 5 ];
+          };
+        };
+        "custom/notification" = {
+          "tooltip" = false;
+          "format" = "";
+          "on-click" = "swaync-client -t -sw";
+          "escape" = true;
+        };
+        "clock" = {
+          "format" = "{:%a %d %B %H:%M}";
+          "interval" = 1;
+          "tooltip-format" = "<tt>{calendar}</tt>";
+          "calendar" = {
+            "format" = {
+              "today" = "<span color ='#fAfBfC'><b>{}</b></span>";
+            };
+          };
+          "actions" = {
+            "on-click-right" = "shift_down";
+            "on-click" = "shift_up";
+          };
+        };
+        "network" = {
+          "format-wifi" = "";
+          "format-ethernet" ="";
+          "format-disconnected" = "";
+          "tooltip-format-disconnected" = "Error";
+          "tooltip-format-wifi" = "{essid} ({signalStrength}%) ";
+          "tooltip-format-ethernet" = "{ifname} 🖧 ";
+          "on-click" = "foot nmtui";
+        };
+        "bluetooth" = {
+          "format-on" = "󰂯";
+          "format-off" = "BT-off";
+          "format-disabled" = "󰂲";
+          "format-connected-battery" = "{device_battery_percentage}% 󰂯";
+          "format-alt" = "{device_alias} 󰂯";
+          "tooltip-format" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          "tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          "tooltip-format-enumerate-connected" = "{device_alias}\n{device_address}";
+          "tooltip-format-enumerate-connected-battery" = "{device_alias}\n{device_address}\n{device_battery_percentage}%";
+          "on-click-right" = "blueman-manager";
+        };
+        "battery" = {
+          "interval" =30;
+          "states" = {
+            "good" = 95;
+            "warning" = 30;
+            "critical" = 20;
+          };
+          "format" = "{capacity}% {icon}";
+          "format-charging" = "{capacity}% 󰂄";
+          "format-plugged" = "{capacity}% 󰂄 ";
+          "format-alt" = "{time} {icon}";
+          "format-icons" = [
+            "󰁻"
+            "󰁼"
+            "󰁾"
+            "󰂀"
+            "󰂂"
+            "󰁹"
+          ];
         };
 
-        "clock" = {
-          "interval" = 10;
-          "format" = "{:%a %d %B %H:%M}";
+        "custom/expand" = {
+          "format" = "  ";
           "tooltip" = false;
         };
-
-        "network" = {
-          "interval" = 5;
-          "format-wifi" = "   {signalStrength}% {essid}";
-          "format-ethernet" = "  {ifname}: {ipaddr}/{cidr}";
-          "format-disconnected" = "⚠  Disconnected";
-          "tooltip-format" = "{ifname}: {ipaddr}";
+        "custom/endpoint" ={
+          "format" = "|";
+          "tooltip" = false;
         };
-
-        "tray" = {
-          "icon-size" = 21;
-          "spacing" = 10;
-        };
-
-        "pulseaudio" = {
-          "scroll-step" = 1;
-          "format" = "{icon}  {volume}%";
-          "format-bluetooth" = "{icon}  {volume}%";
-          "format-muted" = "";
-          "format-icons" = {
-            "headphones" = "";
-            "handsfree" = "";
-            "headset" = "";
-            "phone" = "";
-            "portable" = "";
-            "car" = "";
-            "default" = ["" ""];
+        "group/expand" = {
+          "orientation" = "horizontal";
+          "drawer" = {
+            "transition-duration" = 600;
+            "transition-to-left" = true;
+            "click-to-reveal" = true;
           };
-          "on-click" = "pavucontrol";
-        };
-
-        "battery" = {
-          "interval" = 10;
-          "states" = {
-            "warning" = 30;
-            "critical" = 15;
-          };
-          "format" = "{icon}  {capacity}%";
-          "format-discharging" = "{icon}  {capacity}%";
-          "format-icons" = [
-            " "
-            " "
-            " "
-            " "
-            " "
-          ];
-          "tooltip" = true;
+          "modules" = ["custom/expand" "cpu" "memory" "temperature"];
         };
 
         "cpu" = {
-          "interval" = 5;
-          "on-click" = "foot --title=\"Htop\" --app-id=\"htop\" htop --sort-key=PERCENT_CPU";
-          "states" = {
-            "warning" = 80;
-            "critical" = 95;
-          };
-          "format" = "󰍛 {usage}%";
+          "format" = "󰻠";
+          "tooltip" = true;
         };
-
         "memory" = {
-          "interval" = 5;
-          "format" = " {}%";
-          "on-click" = "foot --title=\"Htop\" --app-id=\"htop\" htop --sort-key=PERCENT_MEM";
-          "states" = {
-            "warning" = 70;
-            "critical" = 90;
-          };
+          "format" = "";
+        };
+        "temperature" = {
+          "critical-threshold" = 80;
+          "format" = "";
+        };
+        "tray" = {
+          "icon-size" = 14;
+          "spacing" = 10;
         };
       }
+
     ];
     style = ./style.css;
   };

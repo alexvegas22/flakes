@@ -11,7 +11,7 @@
         "[workspace 8 silent] mullvad-vpn"
         "[workspace 3 silent] discord"
         "[workspace 3 silent] zen"
-        "waybar & hyprpaper & dunst"
+        "waybar & hyprpaper"
         "nm-applet -indicator"
         "blueman-manager -indicator"
         "libinput-gestures"
@@ -19,7 +19,7 @@
         "[workspace 2 silent] emacsclient -c"
         "otd-daemon"
       ];
-      
+
       monitor = [
         ",preferred,auto,1"
         "HDMI-A-1,1920x1080,auto,1"
@@ -191,7 +191,7 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
-      
+
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "workspace:special_workspace, title:(.*)(- TI-Nspire)$"
