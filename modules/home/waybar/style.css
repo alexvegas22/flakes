@@ -1,6 +1,14 @@
 @define-color background #191919;
 @define-color color0 #AA5577;
-@define-color color9 #AA5577;
+@define-color color1 #BB6677;
+@define-color color2 #CC7788;
+@define-color color3 #DD8899;
+@define-color color4 #EE99AA;
+@define-color color5 #FFAACB;
+@define-color color6 #FFBBCC;
+@define-color color7 #FFCCDD;
+@define-color color8 #FFDDFF;
+@define-color color9 #FFEEFF;
 * {
     font-size: 13px;
     font-weight: 600;
@@ -15,18 +23,22 @@ tooltip {
     background:@background;
     color: @color7;
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+window{
+    color:rgba(255,255,255,0.8);
+}
+
+#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover, #custom-expand:hover{
+    color:alpha(@color7,.5);
     transition: all .3s ease;
-    color:@color9;
 }
 #custom-notification {
-    padding: 0px 5px 0 10;
+    padding: 0px 5px 0 10px;
     transition: all .3s ease;
-    color:@color7;
+    color:rgba(255,255,255,0.8);
 }
 #clock{
     padding: 0px 5px;
-    color:@color7;
+    color:rgba(255,255,255,0.8);
     transition: all .3s ease;
 }
 
@@ -40,23 +52,23 @@ tooltip {
     transition: all .2s ease;
 }
 #workspaces button:hover {
-    color:rgba(0,0,0,0);
+    color: white;
     border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
     transition: all 1s ease;
 }
 #workspaces button.active {
-    color: @color9;
+    color: @color7;
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 #workspaces button.empty {
-    color: rgba(0,0,0,0);
+    color: @color1;
     border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
 #workspaces button.empty:hover {
-    color: rgba(0,0,0,0);
+    color: white;
     border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
     transition: all 1s ease;
@@ -69,21 +81,17 @@ tooltip {
 #bluetooth{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
+    color:rgba(255,255,255,0.8);
 }
 #network{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
+    color:rgba(255,255,255,0.8);
 }
 #battery{
-    padding: 0px 10px 0 5;
+    padding: 0px 10px 0 5px;
     transition: all .3s ease;
-    color:@color7;
-
-
+    color:rgba(255,255,255,0.8);
 }
 #battery.charging {
     color: #26A65B;
@@ -107,22 +115,17 @@ tooltip {
 }
 #custom-expand{
     padding: 0px 5px;
-    color:alpha(@foreground,.2);
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+    color:rgba(255,255,255,.8);
     transition: all .3s ease;
 }
-#custom-expand:hover{
-    color:rgba(255,255,255,.2);
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
-}
+
 #custom-colorpicker{
     padding: 0px 5px;
 }
 #cpu,#memory,#temperature{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
+    color:rgba(255,255,255,0.8);
 }
 #custom-endpoint{
     color:transparent;

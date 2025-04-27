@@ -6,9 +6,9 @@
         "layer" = "top";
         "position" = "top";
         "reload_style_on_change"= true;
-        "modules-left" = ["custom/notification" "clock" "tray"];
-        "modules-center"= ["hyprland/workspaces"];
-        "modules-right"= ["group/expand" "bluetooth" "network" "battery"];
+        "modules-left" = ["hyprland/workspaces"];
+        "modules-center"= ["hyprland/window"];
+        "modules-right"= ["group/expand" "custom/notification" "clock" "tray" "network" "battery"];
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
@@ -78,7 +78,7 @@
         };
 
         "custom/expand" = {
-          "format" = "  ";
+          "format" = "";
           "tooltip" = false;
         };
         "custom/endpoint" ={
@@ -92,7 +92,7 @@
             "transition-to-left" = true;
             "click-to-reveal" = true;
           };
-          "modules" = ["custom/expand" "cpu" "memory" "temperature"];
+          "modules" = ["custom/expand" "cpu" "memory" "temperature" "custom/endpoint"];
         };
 
         "cpu" = {
