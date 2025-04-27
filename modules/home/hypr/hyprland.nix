@@ -10,13 +10,13 @@
         "[workspace 9 silent] keepassxc"
         "[workspace 8 silent] mullvad-vpn"
         "[workspace 3 silent] discord"
-        "[workspace 3 silent] zen"
-        "waybar & hyprpaper"
+        "[workspace 2 silent] zen"
+        "waybar & hyprpaper & swaync"
         "nm-applet -indicator"
         "blueman-manager -indicator"
         "libinput-gestures"
         "hypridle"
-        "[workspace 2 silent] emacsclient -c"
+        "[workspace 1 silent] emacsclient -c"
         "otd-daemon"
       ];
 
@@ -61,7 +61,7 @@
         gaps_in = 1;
         gaps_out = 2;
         border_size = 1;
-        "col.active_border"= "rgba(555555ee) rgba(aa0000ee) 270deg";
+        "col.active_border"= "rgba(555555ee) rgba(aa5577ee) 270deg";
         "col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
         allow_tearing = false;
@@ -141,6 +141,7 @@
         "$mainMod SHIFT, F, exec, zen"
         "$mainMod SHIFT, K, exec, krita"
         "$mainMod SHIFT, R, exec, record"
+        "$mainMod SHIFT, N, exec, swaync-client -t"
         "$mainMod, P, exec, wofi --show drun"
         "$mainMod SHIFT, E, exec, emacsclient -c"
         ", Print, exec, grim -g \"$(slurp)\" ~/Images/Screenshots/$(date +'%s_grim.png') && wl-copy < ~/Images/Screenshots/$(date +'%s_grim.png')"
@@ -194,7 +195,6 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "workspace:special_workspace, title:(.*)(- TI-Nspire)$"
         "float,  title:^(Unlock Database - KeePassXC)$"
         "center, title:^(Unlock Database - KeePassXC)$"
       ];

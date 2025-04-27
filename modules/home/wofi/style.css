@@ -1,90 +1,62 @@
+@define-color background #191919;
+@define-color color0 #AA5577;
+@define-color color1 #BB6677;
+@define-color color2 #CC7788;
+@define-color color3 #DD8899;
+@define-color color4 #EE99AA;
+@define-color color5 #FFAACB;
+@define-color color6 #FFBBCC;
+@define-color color7 #FFCCDD;
+@define-color color8 #FFDDFF;
+@define-color color9 #FFEEFF;
+@define-color text rgba(255,255,255,0.8);
+
 * {
-
-    font-weight:600;
-    font-size:12px;
-}
-/*base background color*/
-@define-color bg_main rgba(25, 25, 25, 1);
-@define-color bg_main_tooltip rgba(0, 0, 0, 0.9);
-
-
-/*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.3);
-/*base background color of active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
-
-/*base border color*/
-@define-color border_main rgba(255, 255, 255, 0.2);
-
-/*text color for entries, views and content in general */
-@define-color content_main white;
-/*text color for entries that are unselected */
-@define-color content_inactive rgba(255, 255, 255, 0.25);
-
-
-#entry {
-  padding: 2px 3px 2px 3px;
-}
-
-#entry:selected {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 0px;
-    margin-right: 5px;
-    background:  #404040;
-    box-shadow: inset 0 0 7px #111111;
-  background-color: #aa0000;
-}
-*:focus:not(.focus-visible) {
-  outline: none;
-}
-#text:selected {
-  color: white;
+    all: unset;
+    font-family: "CaskaydiaCove Nerd Font";
+    font-size: 13px;
+    font-weight: 600;
+    color: @text;
 }
 
 #window {
-  padding: 2px;
-  background-color: @bg_main;
-  font-family: 'Inter Nerd Font Propo','FuraCode Nerd Font Mono';
-  font-size: 15px;
-  border: 1px solid @border_main;
-  color: white;
-}
-
-#input {
-    color : white;
-    border-radius:0;
-    border : none;
-    padding : 0 5px 0 5px;
-    margin-left: 0px;
-    margin-right: 5px;
-    background:  #404040;
-    box-shadow: inset 0 0 7px #111111;
-}
-
-#inner-box {
-  color: #d8dee9;
-
-  background-color: transparent;
+    border: 1px solid @color1;
+    border-radius: 10px;
 }
 
 #outer-box {
-  margin: 15px;
-  background-color: transparent;
+    background-color: @background;
+    border: 1px solid @color0;
+    border-radius: 10px;
 }
 
-#scroll {
-  margin-top: 10px;
-  background-color: transparent;
-  border: none;
+#input{
+    margin: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    color: @text;
+    background-color: alpha(@color3,0.3);
 }
 
-#text {
-  padding: 3px;
-  background-color: transparent;
+#entry {
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    color: @text;
+    border-radius: 10px;
 }
 
-#img {
-  background-color: transparent;
-  padding: 5px;
+#entry:selected {
+    background-color: alpha(@color1,0.5);
+    color: @text;
+}
+
+
+expander > title > arrow {
+    border-radius: 50%;
+    background-color: @color1;
+    margin-right: 5px;
+}
+
+expander > title > arrow:checked {
+    background-color: @color7;
 }
