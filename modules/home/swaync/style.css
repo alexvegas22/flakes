@@ -332,7 +332,7 @@ label {
 }
 
 .widget-menubar button:focus:hover {
-    background: @base;
+    background: red;
     /* background: alpha(currentColor,0.1); */
     box-shadow: none;
 }
@@ -385,7 +385,7 @@ label {
 
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-    background: @mantle;
+    background: alpha(@color7, 0.3);
     /* background: alpha(currentColor, 0.1); */
 }
 
@@ -560,31 +560,32 @@ carouselindicatordots {
 .widget-dnd>switch {
     font-size: initial;
     border-radius: 12px;
-    background: @surface0;
-    border: 1px solid @pink;
+    background: @mantle;
+    /* border: 1px solid @pink; */
     box-shadow: none;
 }
 
 .widget-dnd>switch:checked {
-    background: @surface2;
+    background: @surface0;
 }
 
 .widget-dnd>switch slider {
-    background: @mantle;
+    background: @crust;
     border-radius: 12px;
 }
 
 /* Toggles */
 .toggle:checked {
-    background: @surface1;
+    background: @background;
     /* background: @theme_selected_bg_color; */
 }
 
-/*.toggle:not(:checked) {
+.toggle:not(:checked) {
     color: rgba(128, 128, 128, 0.5);
-}*/
+}
+
 .toggle:checked:hover {
-    background: @surface2;
+    background: @mantle;
     /* background: alpha(@theme_selected_bg_color, 0.75); */
 }
 
