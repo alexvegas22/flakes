@@ -8,7 +8,7 @@
         "reload_style_on_change"= true;
         "modules-left" = ["hyprland/workspaces"];
         "modules-center"= ["hyprland/window"];
-        "modules-right"= ["tray" "cpu" "memory" "custom/notification" "clock" "network" "battery"];
+        "modules-right"= ["tray" "cpu" "memory" "network" "custom/notification" "clock" "battery"];
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
@@ -75,24 +75,6 @@
             "󰂂"
             "󰁹"
           ];
-        };
-
-        "custom/expand" = {
-          "format" = "";
-          "tooltip" = false;
-        };
-        "custom/endpoint" ={
-          "format" = "|";
-          "tooltip" = false;
-        };
-        "group/expand" = {
-          "orientation" = "horizontal";
-          "drawer" = {
-            "transition-duration" = 600;
-            "transition-to-left" = true;
-            "click-to-reveal" = true;
-          };
-          "modules" = ["custom/expand" "cpu" "memory" "temperature" "custom/endpoint"];
         };
 
         "cpu" = {
