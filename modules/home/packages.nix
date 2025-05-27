@@ -9,6 +9,7 @@
     cpio
     dig
     direnv
+    nmap
     discord
     dive
     docker
@@ -16,6 +17,7 @@
     evince
     hyprpicker
     fastfetch
+    audacity
     feh
     foot
     fprintd

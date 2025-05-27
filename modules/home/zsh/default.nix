@@ -10,9 +10,9 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" "docker" "kubectl"];
-    };                  
-    
-    shellAliases = {    
+    };
+
+    shellAliases = {
 
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
@@ -36,7 +36,7 @@
       smake="sudo make clean install";
     };
 
-    initExtra = ''
+    initContent = ''
       export KUBECONFIG=$HOME/.kube/config
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
@@ -49,6 +49,6 @@
       if [ -f '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
     '';
-           
+
   };
 }

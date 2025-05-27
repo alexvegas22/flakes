@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     docker
+    libvirt
     spice
     spice-gtk
     spice-protocol

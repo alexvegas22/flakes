@@ -82,7 +82,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
         bezier = "myBezier,0.1,0.9,0.1,1";
         animation = [
           "windows,1,7,myBezier"

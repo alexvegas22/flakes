@@ -8,7 +8,7 @@
         "reload_style_on_change"= true;
         "modules-left" = ["hyprland/workspaces"];
         "modules-center"= ["hyprland/window"];
-        "modules-right"= ["group/expand" "custom/notification" "clock" "tray" "network" "battery"];
+        "modules-right"= ["tray" "cpu" "memory" "custom/notification" "clock" "network" "battery"];
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
@@ -96,15 +96,15 @@
         };
 
         "cpu" = {
-          "format" = "󰻠";
+          "format" = "󰻠 {usage}%";
           "tooltip" = true;
         };
         "memory" = {
-          "format" = "";
+          "format" = "  {}%";
         };
         "temperature" = {
           "critical-threshold" = 80;
-          "format" = "";
+          "format" = " {}C";
         };
         "tray" = {
           "icon-size" = 14;
