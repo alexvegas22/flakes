@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.codiun = {
+  programs.codium = {
     enable = true;
   };
 }
