@@ -8,7 +8,7 @@
         "reload_style_on_change"= true;
         "modules-left" = ["hyprland/workspaces"];
         "modules-center"= ["hyprland/window"];
-        "modules-right"= ["tray" "cpu" "memory" "network" "custom/notification" "clock" "battery"];
+        "modules-right"= ["tray" "cpu" "memory" "wireplumber" "network" "custom/notification" "clock" "battery"];
 
         "hyprland/workspaces" = {
           "persistent-workspaces" = {
@@ -35,6 +35,12 @@
             "on-click" = "shift_up";
           };
         };
+        "wireplumber" = {
+	        "format" = "{icon}   {volume}%";
+	        "format-muted" = "";
+	        "on-click" = "helvum";
+	        "format-icons" = [""  "" ""];
+	      };
         "network" = {
           "format-wifi" = "";
           "format-ethernet" ="";
