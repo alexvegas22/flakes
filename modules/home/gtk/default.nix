@@ -6,20 +6,30 @@
     # x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 16;
+    size = 12;
   };
 
   gtk = {
     enable = true;
 
     theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
+      name = "Gruvbox-Green-Dark";
+      package = pkgs.gruvbox-gtk-theme.override {
+        colorVariants = [ "dark" ];
+        themeVariants = [ "green" ];
+        tweakVariants = [ "macos" ];
+      };
     };
-
     iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme.override {
+        color = "black";
+      };
+    };
+    cursorTheme = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 12;
     };
 
     font = {

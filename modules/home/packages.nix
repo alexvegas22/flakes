@@ -54,6 +54,7 @@
     musescore
     nemo
     networkmanagerapplet
+    nextcloud-client
     brlaser
     nfs-utils
     obs-studio
