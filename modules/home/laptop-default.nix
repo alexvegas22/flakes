@@ -7,10 +7,10 @@
     ./foot
     ./git
     ./hypr
-    ./waybar
     ./nemo.nix
     ./packages.nix
     ./scripts
+    ./waybar
     ./xdg-mimes.nix
     ./zen-browser
     ./zsh

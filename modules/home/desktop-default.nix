@@ -7,14 +7,14 @@
     ./foot
     ./git
     ./hypr
-    ./net
-    ./waybar
-    ./zen-browser
     ./nemo.nix
+    ./net
     ./packages.nix
     ./programming
     ./scripts
+    ./waybar
     ./xdg-mimes.nix
+    ./zen-browser
     ./zsh
   ];
 }
