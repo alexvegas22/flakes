@@ -39,6 +39,7 @@
     initContent = ''
       export KUBECONFIG=$HOME/.kube/config
       export KREW_ROOT=$HOME/.krew
+      export GOPATH=$HOME/go
       export PATH="${pkgs.go}/bin:${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin:${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
       if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
         source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
