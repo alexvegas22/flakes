@@ -14,7 +14,6 @@
       nssmdns4 = true;
       openFirewall = true;
     };
-    logind.extraConfig = "HandlePowerKey=ignore";
     openssh = {
       enable = true;
       ports = [ 22 ];
