@@ -67,7 +67,7 @@
     qt5.qtwayland
     signal-desktop
     slurp
-    stremio
+#    stremio
     swww
     tmux
     traceroute

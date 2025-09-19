@@ -47,17 +47,6 @@
         use_nearest_neighbor = false;
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_touch = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_distance = 400;
-        workspace_swipe_min_speed_to_force = 30;
-        workspace_swipe_create_new = true;
-        workspace_swipe_cancel_ratio = 0.15;
-        workspace_swipe_forever = true;
-      };
-
       general = {
         gaps_in = 1;
         gaps_out = 2;

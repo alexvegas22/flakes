@@ -19,7 +19,7 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    gitLfs
+    git-lfs
   ];
 
   environment.sessionVariables = {

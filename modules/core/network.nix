@@ -9,6 +9,8 @@
       checkReversePath = "loose";
     };
 
+    networkmanager.wifi.backend = "iwd";
+
     nat = {
       enable = true;
       enableIPv6 = true;
