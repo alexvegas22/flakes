@@ -41,14 +41,21 @@
 	        "on-click" = "helvum";
 	        "format-icons" = [""  "" ""];
 	      };
-        "network" = {
+        "network#wifi" = {
+          "interface" = "wlan0";
           "format-wifi" = "";
-          "format-ethernet" ="";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Error";
           "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n{ipaddr}";
+          "on-click" = "foot iwctl";
+        };
+        "network#ethernet" = {
+          "interface" = "enp0s31f6";
+          "format-ethernet" ="";
+          "format-disconnected" = "";
+          "tooltip-format-disconnected" = "Error";
           "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
-          "on-click" = "foot nm-connection-editor";
+          "on-click" = "foot iwctl";
         };
         "bluetooth" = {
           "format-on" = "󰂯";
@@ -63,7 +70,7 @@
           "on-click-right" = "blueman-manager";
         };
         "battery" = {
-          "interval" =30;
+          "interval" = 30;
           "states" = {
             "good" = 95;
             "warning" = 30;
