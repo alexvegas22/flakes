@@ -41,7 +41,7 @@
 	        "on-click" = "helvum";
 	        "format-icons" = [""  "" ""];
 	      };
-        "network#wifi" = {
+        "network" = {
           "interface" = "wlan0";
           "format-wifi" = "";
           "format-disconnected" = "";
@@ -52,10 +52,7 @@
         "network#ethernet" = {
           "interface" = "enp0s31f6";
           "format-ethernet" ="";
-          "format-disconnected" = "";
-          "tooltip-format-disconnected" = "Error";
           "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
-          "on-click" = "foot iwctl";
         };
         "bluetooth" = {
           "format-on" = "󰂯";
