@@ -53,8 +53,8 @@
     mpv
     musescore
     nemo
-    networkmanagerapplet
     nextcloud-client
+    nyxt
     brlaser
     nfs-utils
     obs-studio
@@ -81,10 +81,8 @@
     waylock
     wf-recorder
     wget
-    where-is-my-sddm-theme
     wineWowPackages.full
     winetricks
-    wireguard-tools
     wireplumber
     wireshark
     wl-clipboard

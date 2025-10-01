@@ -2,7 +2,8 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = false;
-    nameservers = [ "1.1.1.1" ];
+    networkmanager.dns = "none";
+    nameservers = [ "1.1.1.1" "9.9.9.9"];
     firewall = {
       allowedTCPPorts = [ 22 80 443 631 5353 6530 6379 5000 5173 9050 9051 18080 ] ;
       allowedUDPPorts = [ 51820 18080 ];

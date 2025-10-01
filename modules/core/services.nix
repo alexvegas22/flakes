@@ -19,16 +19,13 @@
       ports = [ 22 ];
       settings = {
         PasswordAuthentication = false;
-        AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
+        AllowUsers = null;
         UseDns = true;
         X11Forwarding = false;
         PermitRootLogin = "prohibit-password";
       };
     };
-    # Enable the GNOME Desktop Environment.
-    displayManager.sddm.enable = true;
-    displayManager.sddm.theme = "where_is_my_sddm_theme";
-
+    displayManager.ly.enable = true;
     udev.packages = [ pkgs.yubikey-personalization ];
   };
   environment.systemPackages = [
