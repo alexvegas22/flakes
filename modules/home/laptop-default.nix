@@ -6,7 +6,6 @@
     ./fonts
     ./foot
     ./git
-    ./hypr
     ./nemo.nix
     ./packages.nix
     ./scripts

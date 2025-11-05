@@ -6,7 +6,6 @@
     ./fonts
     ./foot
     ./git
-    ./hypr
     ./waybar
     ./swaync
     ./latex

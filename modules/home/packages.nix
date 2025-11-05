@@ -10,7 +10,7 @@
     dig
     direnv
     nmap
-    discord
+    vesktop
     dive
     docker
     docker-compose
@@ -61,13 +61,14 @@
     onboard
     openssl
     pavucontrol
+    prismlauncher
     prusa-slicer
     pywal
     qemu
     qt5.qtwayland
     signal-desktop
     slurp
-#    stremio
+    swaybg
     swww
     tmux
     traceroute

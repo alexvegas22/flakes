@@ -4,7 +4,7 @@
     # Fonts
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     liberation_ttf
     fira-code
     fira-code-symbols
@@ -15,5 +15,4 @@
     nerd-fonts.iosevka
     nerd-fonts.iosevka-term
   ];
-#  ++ (builtins.attrValues nerd-fonts);
 }

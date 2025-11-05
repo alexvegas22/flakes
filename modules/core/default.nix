@@ -13,7 +13,6 @@
     ./system.nix
     ./user.nix
     ./virtualization.nix
-    ./wayland.nix
     ./wireshark.nix
     ./xserver.nix
   ];

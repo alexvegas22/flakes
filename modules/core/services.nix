@@ -28,7 +28,7 @@
     displayManager.ly.enable = true;
     udev.packages = [ pkgs.yubikey-personalization ];
   };
-  environment.systemPackages = [
-	  pkgs.where-is-my-sddm-theme
+  environment.systemPackages = with pkgs; [
+    alacritty fuzzel swaylock mako swayidle
   ];
 }

@@ -15,8 +15,8 @@
     virt-manager
     virt-viewer
     virtiofsd
+    virtio-win
     win-spice
-    win-virtio
   ];
 
   # Manage the virtualisation services
@@ -25,8 +25,6 @@
       enable = true;
       qemu = {
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
     docker.enable = true;
