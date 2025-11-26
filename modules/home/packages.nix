@@ -3,6 +3,8 @@
 , ...
 }: {
   home.packages = (with pkgs; [
+    adwaita-icon-theme
+    adwaita-icon-theme-legacy
     bemenu
     brightnessctl
     btop
@@ -28,6 +30,7 @@
     glm
     gnome-session
     gnome-settings-daemon
+    gnome-themes-extra
     gnuplot
     graphviz
     grim
@@ -91,6 +94,7 @@
     wofi
     xapp
     xournalpp
+    xwayland-satellite
     yt-dlp
     yubioath-flutter
     zenity

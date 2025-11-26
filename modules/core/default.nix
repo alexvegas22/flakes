@@ -14,6 +14,5 @@
     ./user.nix
     ./virtualization.nix
     ./wireshark.nix
-    ./xserver.nix
   ];
 }

@@ -24,6 +24,7 @@
         parskip
         csquotes
         titlesec
+        titling
         capt-of
         biblatex
         physics

@@ -6,8 +6,8 @@
         "layer" = "top";
         "position" = "top";
         "reload_style_on_change"= true;
-        "modules-left" = ["hyprland/workspaces"];
-        "modules-center"= ["hyprland/window"];
+        "modules-left" = ["niri/workspaces"];
+        "modules-center"= ["niri/window"];
         "modules-right"= ["tray" "cpu" "memory" "wireplumber" "network" "custom/notification" "clock" "battery"];
 
         "hyprland/workspaces" = {

@@ -9,6 +9,7 @@
     ./waybar
     ./swaync
     ./latex
+    ./hypr
     ./net
     ./zen-browser
     ./nemo.nix

@@ -44,10 +44,6 @@
       if [ -f ~/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
         source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
       fi
-      if [ -f '/home/alex/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/alex/Downloads/google-cloud-sdk/path.zsh.inc';
-      fi
-
-      if [ -f '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/alex/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
     '';
 

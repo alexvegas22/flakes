@@ -24,8 +24,8 @@
 }
 
 #outer-box {
-    background-color: @background;
-    border: 1px solid @color0;
+    background: alpha(@background,.85);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 
 #input{

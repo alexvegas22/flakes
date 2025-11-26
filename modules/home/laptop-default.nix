@@ -7,6 +7,7 @@
     ./foot
     ./git
     ./nemo.nix
+    ./hypr
     ./packages.nix
     ./scripts
     ./waybar
