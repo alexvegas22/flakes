@@ -13,11 +13,13 @@
     direnv
     nmap
     vesktop
+    discord
     dive
     docker
     docker-compose
     evince
     hyprpicker
+    immich
     fastfetch
     audacity
     feh

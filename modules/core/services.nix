@@ -9,6 +9,10 @@
     mullvad-vpn.enable = true;
     blueman.enable = true;
     printing.enable = true;
+    fstrim.enable = true;
+    etcd = {
+      enable = true;
+    };
     avahi = {
       enable = true;
       nssmdns4 = true;

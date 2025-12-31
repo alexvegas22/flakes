@@ -12,6 +12,7 @@
     powerline-fonts
     powerline-symbols
     dina-font
+    nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
     nerd-fonts.iosevka-term
   ];
