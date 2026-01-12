@@ -9,6 +9,10 @@
     };
     hyprland.url = "github:hyprwm/Hyprland";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -22,6 +26,7 @@
       lib = nixpkgs.lib;
     in
       {
+        formatter = pkgs.alejandra;
         nixosConfigurations = {
           rugged = nixpkgs.lib.nixosSystem {
             inherit system;
