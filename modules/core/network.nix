@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   networking = {
     hostName = "nixos";
-    networkmanager.enable = false;
+    networkmanager.enable = true;
     networkmanager.dns = "none";
     nameservers = [ "9.9.9.9" "142.137.248.40"];
     firewall = {
@@ -10,19 +10,6 @@
       checkReversePath = "loose";
     };
 
-    wireless = {
-      iwd = {
-        enable = true;
-        settings = {
-          IPv6 = {
-            Enabled = true;
-          };
-          Settings = {
-            AutoConnect = true;
-          };
-        };
-      };
-    };
     nat = {
       enable = true;
       enableIPv6 = true;
