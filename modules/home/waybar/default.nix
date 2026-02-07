@@ -42,12 +42,13 @@
 	        "format-icons" = [""  "" ""];
 	      };
         "network" = {
-          "interface" = "wlan0";
           "format-wifi" = "";
+          "format-ethernet" ="";
           "format-disconnected" = "";
           "tooltip-format-disconnected" = "Error";
           "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n{ipaddr}";
-          "on-click" = "foot iwctl";
+          "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
+          "on-click" = "foot nm-connection-editor";
         };
         "network#ethernet" = {
           "interface" = "enp0s31f6";
