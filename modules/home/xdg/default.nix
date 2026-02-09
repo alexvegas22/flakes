@@ -89,6 +89,7 @@ in
   xdg.mimeApps.enable = true;
   xdg.mimeApps.associations.added = associations;
   xdg.mimeApps.defaultApplications = associations;
+  xdg.configFile."niri/config.kdl".source = ./config.kdl;
   home.packages = with pkgs; [ junction ];
   home.sessionVariables = {
     BROWSER = "zen";

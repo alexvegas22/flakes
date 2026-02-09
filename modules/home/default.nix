@@ -16,7 +16,7 @@
     ./packages.nix
     ./programming
     ./scripts
-    ./xdg-mimes.nix
+    ./xdg
     ./zsh
   ];
 }

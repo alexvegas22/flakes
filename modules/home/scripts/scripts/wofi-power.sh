@@ -8,7 +8,7 @@ case $selected in
   lock)
       exec hyprlock;;
   quit)
-      exec hyprctl dispatch exit;;
+      exec niri msg action quit;;
   suspend)
     exec systemctl suspend;;
   reboot)
