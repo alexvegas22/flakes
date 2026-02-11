@@ -30,7 +30,7 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-    displayManager.ly.enable = true;
+    displayManager.lemurs.enable = true;
     udev.packages = [ pkgs.yubikey-personalization ];
   };
   environment.systemPackages = with pkgs; [
