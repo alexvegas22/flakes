@@ -25,6 +25,7 @@
     feh
     foot
     fprintd
+    thunderbird
     freecad
     ghostscript
     gifsicle
@@ -87,7 +88,7 @@
     waylock
     wf-recorder
     wget
-    wineWowPackages.full
+    wineWow64Packages.full
     winetricks
     wireplumber
     wireshark

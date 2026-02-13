@@ -30,7 +30,17 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-    displayManager.lemurs.enable = true;
+    displayManager.ly = {
+      enable = true;
+      package = pkgs.ly;
+      settings = {
+        animation = "doom";
+        auth_fails = 3;
+        battery_id = "BAT0";
+        border_fg = "0xAA5577";
+        box_title = "V34L";
+      };
+    };
     udev.packages = [ pkgs.yubikey-personalization ];
   };
   environment.systemPackages = with pkgs; [
