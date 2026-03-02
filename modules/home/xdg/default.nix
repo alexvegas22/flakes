@@ -2,7 +2,7 @@
 with lib;
 let
   defaultApps = {
-    browser = [ "zen.desktop" ];
+    browser = [ "zen-beta.desktop" ];
     text = [ "emacs.desktop" ];
     image = [ "viewnior.desktop" ];
     audio = [ "mpv.desktop" ];
@@ -89,10 +89,9 @@ in
   xdg.mimeApps.enable = true;
   xdg.mimeApps.associations.added = associations;
   xdg.mimeApps.defaultApplications = associations;
-  xdg.configFile."niri/config.kdl".source = ./config.kdl;
   home.packages = with pkgs; [ junction ];
   home.sessionVariables = {
-    BROWSER = "zen";
+    BROWSER = "zen-beta";
     # prevent wine from creating file associations
     WINEDLLOVERRIDES = "winemenubuilder.exe=d";
   };

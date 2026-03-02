@@ -8,6 +8,7 @@
     python3
     go
     gopls
+    nixd
     zig
   ];
 }

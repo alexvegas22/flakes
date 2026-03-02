@@ -10,7 +10,7 @@
     blueman.enable = true;
     printing.enable = true;
     fstrim.enable = true;
-    guix.enable = true;
+    guix.enable = false;
     etcd = {
       enable = true;
     };
@@ -30,11 +30,12 @@
         PermitRootLogin = "prohibit-password";
       };
     };
+
     displayManager.ly = {
       enable = true;
       package = pkgs.ly;
       settings = {
-        animation = "doom";
+        animation = "Matrix";
         auth_fails = 3;
         battery_id = "BAT0";
         border_fg = "0xAA5577";

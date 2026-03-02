@@ -3,20 +3,18 @@
 {
   imports = [
     ./editor
+    ./environment
     ./fonts
     ./foot
     ./git
-    ./waybar
-    ./swaync
     ./latex
-    ./hypr
-    ./net
-    ./zen-browser
     ./nemo.nix
+    ./net
     ./packages.nix
     ./programming
     ./scripts
     ./xdg
+    ./zen-browser
     ./zsh
   ];
 }

@@ -5,7 +5,7 @@
 prefer-no-csd
 
 cursor {
-    xcursor-size 32
+    xcursor-size 12
 }
 
 gestures {
@@ -108,23 +108,64 @@ spawn-at-startup "nextcloud"
 spawn-at-startup "mako"
 spawn-sh-at-startup "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 spawn-sh-at-startup "emacs --daemon && sleep 1 && emacsclient -c -a ''"
-spawn-at-startup "zen"
+spawn-at-startup "zen-beta"
 spawn-at-startup "vesktop"
 spawn-at-startup "mullvad-vpn"
 spawn-at-startup "keepassxc"
 spawn-sh-at-startup "blueman-manager -indicator"
 spawn-at-startup "libinput-gestures"
 spawn-at-startup "otd-daemon"
-spawn-sh-at-startup "swaybg -i ~/Images/Wallpapers/wallpaper.jpg"
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/wallpaper.jpg"
 
 hotkey-overlay {
     skip-at-startup
 }
 
-screenshot-path "~/Images/Screenshots/%Y-%m-%d_%H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 animations {
     slowdown 0.8
+    window-open {
+        duration-ms 250
+        curve "linear"
+
+        custom-shader r"
+        vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+        vec4 color = vec4(0.0);
+
+        if (0.0 <= coords_geo.x && coords_geo.x <= 1.0
+        && 0.0 <= coords_geo.y && coords_geo.y <= 1.0)
+        {
+            vec4 from = vec4(0.212, 0.192, 0.20, 1.0);
+            vec4 to = vec4(0.667, 0.333, 0.467, 1.0);
+            color = mix(from, to, coords_geo.y);
+        }
+
+        return color * niri_clamped_progress;
+        }"
+    }
+    window-close {
+        duration-ms 250
+        curve "linear"
+        custom-shader r"
+        vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+        vec4 color = vec4(0.0);
+
+        if (0.0 <= coords_geo.x && coords_geo.x <= 1.0
+        && 0.0 <= coords_geo.y && coords_geo.y <= 1.0)
+        {
+        vec4 from = vec4(0.667, 0.333, 0.467, 1.0);
+        vec4 to = vec4(0.212, 0.192, 0.20, 1.0);
+        color = mix(from, to, coords_geo.y);
+    }
+
+        return color * (1.0 - niri_clamped_progress);
+    }
+        "
+    }
+    horizontal-view-movement {
+       spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
 }
 
 window-rule {
@@ -139,9 +180,14 @@ window-rule {
     open-floating true
 }
 
+workspace "󰌾" {
+    open-on-output "eDP-1"
+}
+
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     block-out-from "screen-capture"
+    open-on-workspace "vault"
 }
 
 window-rule {
@@ -155,7 +201,7 @@ binds {
     // Programs
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+E hotkey-overlay-title="Open Emacs" { spawn-sh "emacsclient -c"; }
-    Mod+B hotkey-overlay-title="Open Browser" {spawn "zen"; }
+    Mod+B hotkey-overlay-title="Open Browser" {spawn "zen-beta"; }
     Mod+Q hotkey-overlay-title="Open Emacs" { spawn  "wofi-power"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn  "discord"; }
     Mod+N hotkey-overlay-title="Open Notifications" { spawn  "swaync-client -t"; }

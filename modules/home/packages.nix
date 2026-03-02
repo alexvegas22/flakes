@@ -24,9 +24,10 @@
     audacity
     feh
     foot
+    firebird-emu
     fprintd
     thunderbird
-    freecad
+    # freecad
     ghostscript
     gifsicle
     gimp
@@ -47,7 +48,7 @@
     keymapp
     killall
     kitty
-    krita
+    # krita
     libinput
     libinput-gestures
     libnotify

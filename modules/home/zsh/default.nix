@@ -33,6 +33,8 @@
       grep="grep --color=auto";
       e="emacsclient -nw";
       se="sudo emacsclient -nw";
+      home="emacsclient -c ~/flakes/modules/home";
+      core="emacsclient -c ~/flakes/modules/core";
       smake="sudo make clean install";
     };
 

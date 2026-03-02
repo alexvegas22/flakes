@@ -8,6 +8,7 @@
     kubernetes
     kubernetes-helm
     omnictl
+    opentofu
     podman
   ];
 }

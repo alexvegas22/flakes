@@ -7,43 +7,44 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
-    let
-      username = "alex";
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      lib = nixpkgs.lib;
-    in
-      {
+  outputs = inputs @ { flake-parts, nixpkgs, home-manager, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+
+      imports = [
+        inputs.pre-commit-hooks.flakeModule  # ✅ Pre-commit hooks as flake-parts module
+      ];
+
+      perSystem = { pkgs, ... }: {
+        # Pre-commit configuration
+        pre-commit = {
+          settings.excludes = [ "flake.lock" ];
+          settings.hooks.alejandra.enable = true;
+        };
+
+        # Formatter
         formatter = pkgs.alejandra;
-        nixosConfigurations = {
-          rugged = nixpkgs.lib.nixosSystem {
-            inherit system;
-            modules = [ ./hosts/rugged ];
-            specialArgs = {
-              host = "rugged";
-              inherit self inputs username;
-            };
-          };
-          touch = nixpkgs.lib.nixosSystem {
-            inherit system;
-            modules = [ ./hosts/touch ];
-            specialArgs = {
-              host = "touch";
-              inherit self inputs username;
-            };
+      };
+
+      flake = {
+        # Your NixOS configuration
+        nixosConfigurations.touch = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [ ./hosts/touch ];
+          specialArgs = {
+            host = "touch";
+            inherit inputs;
+            username = "alex";
           };
         };
       };
+    };
 }

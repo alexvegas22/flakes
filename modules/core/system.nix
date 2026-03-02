@@ -31,7 +31,7 @@
   time.timeZone = "America/Montreal";
   i18n.defaultLocale = "en_US.UTF-8";
 
-   i18n.extraLocaleSettings = {
+  i18n.extraLocaleSettings = {
     LC_ADDRESS = "fr_CA.UTF-8";
     LC_IDENTIFICATION = "fr_CA.UTF-8";
     LC_MEASUREMENT = "fr_CA.UTF-8";
@@ -42,6 +42,8 @@
     LC_TELEPHONE = "fr_CA.UTF-8";
     LC_TIME = "fr_CA.UTF-8";
   };
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.05";
+
 }

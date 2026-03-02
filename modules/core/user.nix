@@ -9,10 +9,7 @@ let
     zsh
   ];
 
-  homeModule = if hostname == "laptop" then ../../modules/home/laptop-default.nix
-               else if hostname == "rugged" then ../../modules/home/desktop-default.nix
-               else ../../modules/home/default.nix;
-
+  homeModule = ../../modules/home/default.nix;
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
