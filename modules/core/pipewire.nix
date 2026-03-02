@@ -35,5 +35,4 @@
       };
     };
   };
-  environment.systemPackages = with pkgs; [ pulseaudioFull ];
 }

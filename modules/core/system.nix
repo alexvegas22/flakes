@@ -2,6 +2,7 @@
 , pkgs
 , lib
 , inputs
+, config
 , ...
 }: {
   nix = {
@@ -17,10 +18,28 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wget
+    adwaita-icon-theme
+    alacritty
+    docker
+    fuzzel
     git
-    zsh
     git-lfs
+    libvirt
+    mako
+    pulseaudioFull
+    spice
+    spice-gtk
+    spice-protocol
+    swayidle
+    swaylock
+    virt-manager
+    virt-viewer
+    virtio-win
+    virtiofsd
+    wget
+    win-spice
+    wireguard-tools
+    zsh
   ];
 
   environment.sessionVariables = {
@@ -43,7 +62,22 @@
     LC_TIME = "fr_CA.UTF-8";
   };
 
+  # nixpkgs.config.packageOverrides = super: {
+  #   noto-fonts-subset = super.noto-fonts;
+  # };
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.05";
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      guile-zlib = prev.guile-zlib.overrideAttrs (old: {
+        doCheck = false;
+      });
+
+      guix = prev.guix.override {
+        guile-zlib = final.guile-zlib;
+      };
+    })
+  ];
 }

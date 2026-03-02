@@ -30,12 +30,11 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-
     displayManager.ly = {
       enable = true;
       package = pkgs.ly;
       settings = {
-        animation = "Matrix";
+        animation = "Doom";
         auth_fails = 3;
         battery_id = "BAT0";
         border_fg = "0xAA5577";
@@ -44,7 +43,4 @@
     };
     udev.packages = [ pkgs.yubikey-personalization ];
   };
-  environment.systemPackages = with pkgs; [
-    alacritty fuzzel swaylock mako swayidle
-  ];
 }
