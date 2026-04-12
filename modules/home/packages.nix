@@ -57,6 +57,7 @@
     man-pages-posix
     monero-gui
     monero-cli
+    monophony
     mpv
     musescore
     nemo
@@ -76,7 +77,7 @@
     signal-desktop
     slurp
     swaybg
-    swww
+    awww
     tmux
     traceroute
     udiskie

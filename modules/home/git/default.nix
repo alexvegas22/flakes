@@ -5,6 +5,7 @@
       name = "Alexandre Baudouin Vegas";
       email = "alexrbvegas@gmail.com";
     };
+    signing.format = null;
   };
   home.packages = [ pkgs.gh ];
 }

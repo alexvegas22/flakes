@@ -22,6 +22,8 @@
     alacritty
     docker
     fuzzel
+    networkmanagerapplet
+    openconnect
     git
     git-lfs
     libvirt
