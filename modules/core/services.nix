@@ -21,7 +21,7 @@
     };
     openssh = {
       enable = true;
-      ports = [ 22 ];
+      ports = [22];
       settings = {
         PasswordAuthentication = false;
         AllowUsers = null;
@@ -40,6 +40,6 @@
       #   box_title = "V34L";
       # };
     };
-    udev.packages = [ pkgs.yubikey-personalization ];
+    udev.packages = [pkgs.yubikey-personalization];
   };
 }

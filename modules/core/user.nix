@@ -1,6 +1,9 @@
-{ pkgs, inputs, username, ... }:
-
-let
+{
+  pkgs,
+  inputs,
+  username,
+  ...
+}: let
   name = "Alexandre Baudouin Vegas";
   email = "alexrbvegas@gmail.com";
   initialPassword = "root";
@@ -10,19 +13,18 @@ let
   ];
 
   homeModule = ../../modules/home/default.nix;
-in
-{
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
+in {
+  imports = [inputs.home-manager.nixosModules.home-manager];
   programs.zsh.enable = true;
 
   home-manager = {
     backupFileExtension = "backup";
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs email; };
+    extraSpecialArgs = {inherit inputs email;};
 
     users.${username} = {
-      imports = [ (import homeModule) ];
+      imports = [(import homeModule)];
       home.username = username;
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";
@@ -34,9 +36,9 @@ in
     isNormalUser = true;
     initialPassword = initialPassword;
     description = name;
-    extraGroups = [ "networkmanager" "wheel" "input" "docker" "dialout"];
+    extraGroups = ["networkmanager" "wheel" "input" "docker" "dialout"];
     shell = pkgs.zsh;
   };
 
-  nix.settings.allowed-users = [ username ];
+  nix.settings.allowed-users = [username];
 }

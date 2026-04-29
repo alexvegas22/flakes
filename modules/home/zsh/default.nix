@@ -1,6 +1,7 @@
-{ config
-, pkgs
-, ...
+{
+  config,
+  pkgs,
+  ...
 } @ args: {
   programs.zsh = {
     enable = true;
@@ -9,33 +10,32 @@
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" "docker" "kubectl"];
+      plugins = ["git" "sudo" "docker" "kubectl"];
     };
 
     shellAliases = {
-
       # nixos
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
       nbst = "sudo nixos-rebuild switch --flake ~/flakes#touch";
       nbsr = "sudo nixos-rebuild switch --flake ~/flakes#rugged";
-      update = "nix flake update --flake ~/flakes" ;
+      update = "nix flake update --flake ~/flakes";
       # python
       pmv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
 
       # server
-      serv="ssh serv@192.168.0.30";
-      v34l="ssh -p 2222 alex@v34l.com";
-      git-v34l="ssh git@v34l.com";
+      serv = "ssh serv@192.168.0.30";
+      v34l = "ssh -p 2222 alex@v34l.com";
+      git-v34l = "ssh git@v34l.com";
 
       # other
-      ls="ls --color=auto";
-      grep="grep --color=auto";
-      e="emacsclient -nw";
-      se="sudo emacsclient -nw";
-      home="emacsclient -c ~/flakes/modules/home";
-      core="emacsclient -c ~/flakes/modules/core";
-      smake="sudo make clean install";
+      ls = "ls --color=auto";
+      grep = "grep --color=auto";
+      e = "emacsclient -nw";
+      se = "sudo emacsclient -nw";
+      home = "emacsclient -c ~/flakes/modules/home";
+      core = "emacsclient -c ~/flakes/modules/core";
+      smake = "sudo make clean install";
     };
 
     initContent = ''
@@ -48,6 +48,5 @@
       fi
 
     '';
-
   };
 }

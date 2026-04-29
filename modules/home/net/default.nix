@@ -1,7 +1,10 @@
-{ inputs, pkgs, system, ... }:
-
 {
-  home.packages = (with pkgs; [
+  inputs,
+  pkgs,
+  system,
+  ...
+}: {
+  home.packages = with pkgs; [
     i2p
     mullvad-vpn
     onionshare-gui
@@ -9,6 +12,5 @@
     tor
     torsocks
     tor-browser
-  ]);
-
+  ];
 }

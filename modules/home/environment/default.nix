@@ -1,6 +1,8 @@
-{ config,pkgs, ...} :
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs = {
     quickshell = {
       enable = true;
@@ -86,14 +88,14 @@
         {
           "layer" = "top";
           "position" = "top";
-          "reload_style_on_change"= true;
+          "reload_style_on_change" = true;
           "modules-left" = ["niri/workspaces"];
-          "modules-center"= ["niri/window"];
-          "modules-right"= ["tray" "cpu" "memory" "wireplumber" "network" "custom/notification" "clock" "battery"];
+          "modules-center" = ["niri/window"];
+          "modules-right" = ["tray" "cpu" "memory" "wireplumber" "network" "custom/notification" "clock" "battery"];
 
           "hyprland/workspaces" = {
             "persistent-workspaces" = {
-              "*" = [ 1 2 3 4 5 ];
+              "*" = [1 2 3 4 5];
             };
           };
           "custom/notification" = {
@@ -117,14 +119,14 @@
             };
           };
           "wireplumber" = {
-	          "format" = "{icon}   {volume}%";
-	          "format-muted" = "";
-	          "on-click" = "helvum";
-	          "format-icons" = [""  "" ""];
-	        };
+            "format" = "{icon}   {volume}%";
+            "format-muted" = "";
+            "on-click" = "helvum";
+            "format-icons" = ["" "" ""];
+          };
           "network" = {
             "format-wifi" = "";
-            "format-ethernet" ="";
+            "format-ethernet" = "";
             "format-disconnected" = "";
             "tooltip-format-disconnected" = "Error";
             "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n{ipaddr}";
@@ -133,7 +135,7 @@
           };
           "network#ethernet" = {
             "interface" = "enp0s31f6";
-            "format-ethernet" ="";
+            "format-ethernet" = "";
             "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
           };
           "bluetooth" = {
@@ -185,7 +187,6 @@
             "spacing" = 10;
           };
         }
-
       ];
       style = ./waybar-style.css;
     };
@@ -204,9 +205,9 @@
     theme = {
       name = "Gruvbox-Pink-Dark";
       package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        themeVariants = [ "pink" ];
-        tweakVariants = [ "float" ];
+        colorVariants = ["dark"];
+        themeVariants = ["pink"];
+        tweakVariants = ["float"];
       };
     };
     iconTheme = {

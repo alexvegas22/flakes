@@ -1,13 +1,15 @@
-{ inputs
-, pkgs
-, ...
+{
+  inputs,
+  pkgs,
+  ...
 }: {
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     (texlive.combine {
-      inherit (texlive) scheme-medium
+      inherit
+        (texlive)
+        scheme-medium
         latexmk
         xetex
-
         # Org Mode export essentials
         hyperref
         geometry
@@ -32,8 +34,9 @@
         babel
         siunitx
         mathtools
-        xcolor;
+        xcolor
+        ;
     })
     python3Packages.pygments
-  ]);
+  ];
 }

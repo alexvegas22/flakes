@@ -1,6 +1,11 @@
-{ pkgs, lib, username, ... }: {
-  users.users.${username}.extraGroups = [ "wireshark"];
+{
+  pkgs,
+  lib,
+  username,
+  ...
+}: {
+  users.users.${username}.extraGroups = ["wireshark"];
   programs.wireshark = {
-    enable = true;   
+    enable = true;
   };
 }

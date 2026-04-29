@@ -15,18 +15,23 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = inputs @ { flake-parts, nixpkgs, home-manager, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" ];
+  outputs = inputs @ {
+    flake-parts,
+    nixpkgs,
+    home-manager,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
 
       imports = [
-        inputs.pre-commit-hooks.flakeModule  # ✅ Pre-commit hooks as flake-parts module
+        inputs.pre-commit-hooks.flakeModule # ✅ Pre-commit hooks as flake-parts module
       ];
 
-      perSystem = { pkgs, ... }: {
+      perSystem = {pkgs, ...}: {
         # Pre-commit configuration
         pre-commit = {
-          settings.excludes = [ "flake.lock" ];
+          settings.excludes = ["flake.lock"];
           settings.hooks.alejandra.enable = true;
         };
 
@@ -38,7 +43,7 @@
         # Your NixOS configuration
         nixosConfigurations.touch = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = [ ./hosts/touch ];
+          modules = [./hosts/touch];
           specialArgs = {
             host = "touch";
             inherit inputs;

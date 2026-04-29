@@ -1,4 +1,10 @@
-{ self, nixpkgs, inputs, username, ... }: {
+{
+  self,
+  nixpkgs,
+  inputs,
+  username,
+  ...
+}: {
   imports = [
     ./bluetooth.nix
     ./bootloader.nix

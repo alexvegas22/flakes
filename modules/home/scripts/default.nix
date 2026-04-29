@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   compress = pkgs.writeShellScriptBin "compress" (
     builtins.readFile ./scripts/compress.sh
   );
@@ -9,7 +8,7 @@ let
   );
 
   record = pkgs.writeScriptBin "record" (builtins.readFile ./scripts/record.sh);
-  
+
   show-keybinds = pkgs.writeScriptBin "show-keybinds" (
     builtins.readFile ./scripts/keybinds.sh
   );
@@ -17,12 +16,11 @@ let
   vm-start = pkgs.writeScriptBin "vm-start" (
     builtins.readFile ./scripts/vm-start.sh
   );
-  
+
   wofi-power = pkgs.writeShellScriptBin "wofi-power" (
     builtins.readFile ./scripts/wofi-power.sh
   );
-in
-{
+in {
   home.packages = with pkgs; [
     compress
     extract

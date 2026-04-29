@@ -1,8 +1,9 @@
-{ inputs
-, pkgs
-, ...
+{
+  inputs,
+  pkgs,
+  ...
 }: {
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     adwaita-icon-theme
     adwaita-icon-theme-legacy
     bemenu
@@ -19,8 +20,8 @@
     docker-compose
     evince
     hyprpicker
-    immich
     fastfetch
+    stremio-linux-shell
     audacity
     feh
     foot
@@ -48,7 +49,7 @@
     keymapp
     killall
     kitty
-    # krita
+    krita
     libinput
     libinput-gestures
     libnotify
@@ -95,6 +96,7 @@
     wireplumber
     wireshark
     wl-clipboard
+    wl-mirror
     wmctrl
     wofi
     xapp
@@ -103,5 +105,5 @@
     yt-dlp
     yubioath-flutter
     zenity
-    ]);
+  ];
 }

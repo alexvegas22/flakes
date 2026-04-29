@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     settings.user = {
@@ -7,5 +7,5 @@
     };
     signing.format = null;
   };
-  home.packages = [ pkgs.gh ];
+  home.packages = [pkgs.gh];
 }

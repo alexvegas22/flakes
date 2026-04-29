@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.dconf.enable = true;
   programs.niri.enable = true;
   programs.zsh.enable = true;
