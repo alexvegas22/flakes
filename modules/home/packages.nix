@@ -79,6 +79,7 @@
     slurp
     swaybg
     awww
+    teams-for-linux
     tmux
     traceroute
     udiskie
@@ -94,7 +95,6 @@
     wineWow64Packages.full
     winetricks
     wireplumber
-    wireshark
     wl-clipboard
     wl-mirror
     wmctrl

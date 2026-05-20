@@ -128,11 +128,14 @@
             "format-wifi" = "";
             "format-ethernet" = "";
             "format-disconnected" = "";
-            "tooltip-format-disconnected" = "Error";
-            "tooltip-format-wifi" = "{essid} ({signalStrength}%)\n{ipaddr}";
-            "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
-            "on-click" = "foot nm-connection-editor";
+	          "format-linked" = "󰈁 {ifname} (No IP)";
+	          "tooltip-format" = "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}";
+            "tooltip-format-ethernet" = "{ifname}\n{ipaddr}\nDown: {down}\nUp: {up}";
+	          "tooltip-format-wifi" = "{essid} {icon} {signalStrength}%";
+	          "max-length" = 30;
+            "on-click" = "foot nmtui";
           };
+
           "network#ethernet" = {
             "interface" = "enp0s31f6";
             "format-ethernet" = "";

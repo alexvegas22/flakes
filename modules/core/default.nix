@@ -19,6 +19,6 @@
     ./system.nix
     ./user.nix
     ./virtualization.nix
-    ./wireshark.nix
+    # ./wireshark.nix
   ];
 }
