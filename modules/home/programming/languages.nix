@@ -6,6 +6,7 @@
     nodejs
     openjdk
     python3
+    sbcl
     go
     gopls
     nixd

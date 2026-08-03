@@ -16,9 +16,11 @@ with lib; let
     terminal = ["foot.desktop"];
     archive = ["org.gnome.FileRoller.desktop"];
     discord = ["discord.desktop"];
+    gossip = ["/home/alex/.local/gossip.desktop"];
   };
 
   mimeMap = {
+    gossip = ["x-scheme-handler/gossip"];
     text = ["text/plain"];
     image = [
       "image/bmp"

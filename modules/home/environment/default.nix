@@ -91,7 +91,16 @@
           "reload_style_on_change" = true;
           "modules-left" = ["niri/workspaces"];
           "modules-center" = ["niri/window"];
-          "modules-right" = ["tray" "cpu" "memory" "wireplumber" "network" "custom/notification" "clock" "battery"];
+          "modules-right" = ["tray"
+                             "cpu"
+                             "memory"
+                             "wireplumber"
+                             "network"
+                             "custom/notification"
+                             "clock"
+                             "upower"
+                             "upower/bat0"
+                             "upower/bat1"];
 
           "hyprland/workspaces" = {
             "persistent-workspaces" = {
@@ -131,9 +140,9 @@
 	          "format-linked" = "󰈁 {ifname} (No IP)";
 	          "tooltip-format" = "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}";
             "tooltip-format-ethernet" = "{ifname}\n{ipaddr}\nDown: {down}\nUp: {up}";
-	          "tooltip-format-wifi" = "{essid} {icon} {signalStrength}%";
+	          "tooltip-format-wifi" = "{essid} {icon} {signalStrength}%  {bandwidthUpBytes}  {bandwidthDownBytes}";
 	          "max-length" = 30;
-            "on-click" = "foot nmtui";
+            "on-click" = "kitty nmtui";
           };
 
           "network#ethernet" = {
@@ -141,6 +150,7 @@
             "format-ethernet" = "";
             "tooltip-format-ethernet" = "{ifname}\n{ipaddr}";
           };
+
           "bluetooth" = {
             "format-on" = "󰂯";
             "format-off" = "BT-off";
@@ -153,25 +163,19 @@
             "tooltip-format-enumerate-connected-battery" = "{device_alias}\n{device_address}\n{device_battery_percentage}%";
             "on-click-right" = "blueman-manager";
           };
-          "battery" = {
-            "interval" = 30;
-            "states" = {
-              "good" = 95;
-              "warning" = 30;
-              "critical" = 20;
-            };
-            "format" = "{capacity}% {icon}";
-            "format-charging" = "{capacity}% 󰂄";
-            "format-plugged" = "{capacity}% 󰂄 ";
-            "format-alt" = "{time} {icon}";
-            "format-icons" = [
-              "󰁻"
-              "󰁼"
-              "󰁾"
-              "󰂀"
-              "󰂂"
-              "󰁹"
-            ];
+          "upower/bat0" = {
+            "native-path" = "/org/freedesktop/UPower/devices/battery_BAT0";
+            "icon-size"=  20;
+            "hide-if-empty"=  true;
+            "tooltip" =  true;
+            "tooltip-spacing"=  20;
+          };
+          "upower/bat1" = {
+            "native-path" = "/org/freedesktop/UPower/devices/battery_BAT1";
+            "icon-size"=  20;
+            "hide-if-empty"=  true;
+            "tooltip" =  true;
+            "tooltip-spacing"=  20;
           };
 
           "cpu" = {

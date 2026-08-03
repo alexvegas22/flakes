@@ -199,7 +199,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Programs
-    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Open Emacs" { spawn-sh "emacsclient -c"; }
     Mod+B hotkey-overlay-title="Open Browser" {spawn "zen-beta"; }
     Mod+Q hotkey-overlay-title="Open Emacs" { spawn  "wofi-power"; }

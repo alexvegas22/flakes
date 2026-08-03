@@ -2,13 +2,12 @@
   networking = {
     hostName = "nixos";
     extraHosts = ''
-      10.194.33.91 bdlog660.ens.ad.etsmtl.ca
       142.137.248.40 clubetudiant.etsmtl.ca
     '';
     networkmanager.enable = true;
     networkmanager.plugins = [pkgs.networkmanager-openconnect];
     networkmanager.dns = "none";
-    nameservers = ["9.9.9.9" "142.137.248.40"];
+    nameservers = [ "9.9.9.9" "142.137.248.40" ];
     firewall = {
       allowedTCPPorts = [22 80 443 631 5353 6530 6379 5000 5173 9050 9051 18080 51049 35308];
       allowedUDPPorts = [51820 51049 18080 34197 37259 35308 39088];
@@ -23,7 +22,7 @@
 
     wg-quick.interfaces = {
       homelab = {
-        autostart = false;
+        autostart = true;
         address = ["10.100.0.2/32"];
         privateKeyFile = "/etc/wireguard/v34l_private.key";
         dns = ["192.168.2.51"];
@@ -42,20 +41,9 @@
       #   configFile = "/etc/wireguard/user01.conf";
       # };
 
-      cedille = {
-        autostart = false;
-        address = ["10.223.229.9/24"];
-        privateKeyFile = "/etc/wireguard/v34l_private.key";
-        dns = ["1.1.1.1"];
-        peers = [
-          {
-            publicKey = "uh7m6xrXegGrjVID0yiXe0dUjDtYDrs6I6gqSNiZVX4=";
-            allowedIPs = ["0.0.0.0/0"];
-            endpoint = "142.137.247.116:51821";
-            persistentKeepalive = 25;
-          }
-        ];
-      };
+      # cedille = {
+      #   configFile = "/etc/wireguard/cedille.conf";
+      # };
     };
   };
 

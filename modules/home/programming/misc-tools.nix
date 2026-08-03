@@ -8,6 +8,7 @@
     hugo
     jq
     mongodb-compass
+    lsof
     plantuml
     qemu
     redis

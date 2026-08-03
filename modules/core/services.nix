@@ -10,7 +10,7 @@
     blueman.enable = true;
     printing.enable = true;
     fstrim.enable = true;
-    guix.enable = false;
+    guix.enable = true;
     etcd = {
       enable = true;
     };

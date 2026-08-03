@@ -12,9 +12,10 @@
     cpio
     dig
     direnv
+    fd
+    ripgrep
     nmap
     vesktop
-    discord
     dive
     docker
     docker-compose
@@ -56,6 +57,8 @@
     libreoffice
     man-pages
     man-pages-posix
+    mermaid-cli
+    pandoc
     monero-gui
     monero-cli
     monophony
@@ -104,6 +107,7 @@
     xwayland-satellite
     yt-dlp
     yubioath-flutter
+    yubikey-manager
     zenity
   ];
 }
