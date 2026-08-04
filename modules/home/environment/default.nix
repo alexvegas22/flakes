@@ -211,11 +211,6 @@
     gtk4.theme = null;
     theme = {
       name = "Gruvbox-Pink-Dark";
-      package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = ["dark"];
-        themeVariants = ["pink"];
-        tweakVariants = ["float"];
-      };
     };
     iconTheme = {
       name = "Papirus-Dark";
