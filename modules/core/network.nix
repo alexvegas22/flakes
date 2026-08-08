@@ -6,8 +6,8 @@
     '';
     networkmanager.enable = true;
     networkmanager.plugins = [pkgs.networkmanager-openconnect];
-    networkmanager.dns = "none";
-    nameservers = [ "9.9.9.9" "142.137.248.40" ];
+    networkmanager.dns = "systemd-resolved";
+    # nameservers = [ "9.9.9.9" "142.137.248.40" ];
     firewall = {
       allowedTCPPorts = [22 80 443 631 5353 6530 6379 5000 5173 9050 9051 18080 51049 35308];
       allowedUDPPorts = [51820 51049 18080 34197 37259 35308 39088];

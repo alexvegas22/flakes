@@ -10,6 +10,8 @@
     go
     gopls
     nixd
+    rustc
+    rust-analyzer
     zig
   ];
 }

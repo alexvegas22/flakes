@@ -4,39 +4,36 @@
   ...
 }: {
   home.packages = with pkgs; [
-    (texlive.combine {
-      inherit
-        (texlive)
-        scheme-medium
-        latexmk
-        xetex
-        # Org Mode export essentials
-        hyperref
-        geometry
-        fancyhdr
-        graphics
-        wrapfig
-        caption
-        listings
-        minted
-        ulem
-        enumitem
-        footmisc
-        sectsty
-        parskip
-        csquotes
-        titlesec
-        titling
-        capt-of
-        biblatex
-        physics
-        amsmath
-        babel
-        siunitx
-        mathtools
-        xcolor
-        ;
-    })
+    (texlive.withPackages (ps: [
+      ps.scheme-medium
+      ps.latexmk
+      ps.xetex
+      # Org Mode export essentials
+      ps.hyperref
+      ps.geometry
+      ps.fancyhdr
+      ps.graphics
+      ps.wrapfig
+      ps.caption
+      ps.listings
+      ps.minted
+      ps.ulem
+      ps.enumitem
+      ps.footmisc
+      ps.sectsty
+      ps.parskip
+      ps.csquotes
+      ps.titlesec
+      ps.titling
+      ps.capt-of
+      ps.biblatex
+      ps.physics
+      ps.amsmath
+      ps.babel
+      ps.siunitx
+      ps.mathtools
+      ps.xcolor
+    ]))
     python3Packages.pygments
   ];
 }

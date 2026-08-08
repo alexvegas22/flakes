@@ -91,16 +91,18 @@
           "reload_style_on_change" = true;
           "modules-left" = ["niri/workspaces"];
           "modules-center" = ["niri/window"];
-          "modules-right" = ["tray"
-                             "cpu"
-                             "memory"
-                             "wireplumber"
-                             "network"
-                             "custom/notification"
-                             "clock"
-                             "upower"
-                             "upower/bat0"
-                             "upower/bat1"];
+          "modules-right" = [
+            "tray"
+            "cpu"
+            "memory"
+            "wireplumber"
+            "network"
+            "custom/notification"
+            "clock"
+            "upower"
+            "upower/bat0"
+            "upower/bat1"
+          ];
 
           "hyprland/workspaces" = {
             "persistent-workspaces" = {
@@ -137,11 +139,11 @@
             "format-wifi" = "";
             "format-ethernet" = "";
             "format-disconnected" = "";
-	          "format-linked" = "󰈁 {ifname} (No IP)";
-	          "tooltip-format" = "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}";
+            "format-linked" = "󰈁 {ifname} (No IP)";
+            "tooltip-format" = "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}";
             "tooltip-format-ethernet" = "{ifname}\n{ipaddr}\nDown: {down}\nUp: {up}";
-	          "tooltip-format-wifi" = "{essid} {icon} {signalStrength}%  {bandwidthUpBytes}  {bandwidthDownBytes}";
-	          "max-length" = 30;
+            "tooltip-format-wifi" = "{essid} {icon} {signalStrength}%  {bandwidthUpBytes}  {bandwidthDownBytes}";
+            "max-length" = 30;
             "on-click" = "kitty nmtui";
           };
 
@@ -165,17 +167,17 @@
           };
           "upower/bat0" = {
             "native-path" = "/org/freedesktop/UPower/devices/battery_BAT0";
-            "icon-size"=  20;
-            "hide-if-empty"=  true;
-            "tooltip" =  true;
-            "tooltip-spacing"=  20;
+            "icon-size" = 20;
+            "hide-if-empty" = true;
+            "tooltip" = true;
+            "tooltip-spacing" = 20;
           };
           "upower/bat1" = {
             "native-path" = "/org/freedesktop/UPower/devices/battery_BAT1";
-            "icon-size"=  20;
-            "hide-if-empty"=  true;
-            "tooltip" =  true;
-            "tooltip-spacing"=  20;
+            "icon-size" = 20;
+            "hide-if-empty" = true;
+            "tooltip" = true;
+            "tooltip-spacing" = 20;
           };
 
           "cpu" = {
@@ -200,6 +202,7 @@
   };
 
   home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";

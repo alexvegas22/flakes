@@ -12,6 +12,5 @@
     plantuml
     qemu
     redis
-    rustc
   ];
 }

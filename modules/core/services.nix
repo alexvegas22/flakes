@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  powerManagement.enable = true;
   services = {
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
@@ -11,6 +12,7 @@
     printing.enable = true;
     fstrim.enable = true;
     guix.enable = true;
+    thermald.enable = true;
     etcd = {
       enable = true;
     };
