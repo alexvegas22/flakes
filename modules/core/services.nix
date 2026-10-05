@@ -32,6 +32,7 @@
         PermitRootLogin = "prohibit-password";
       };
     };
+
     displayManager.ly = {
       enable = true;
       # settings = {

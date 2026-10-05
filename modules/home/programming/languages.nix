@@ -12,6 +12,7 @@
     nixd
     rustc
     rust-analyzer
+    rustfmt
     zig
   ];
 }

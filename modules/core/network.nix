@@ -3,14 +3,24 @@
     hostName = "nixos";
     extraHosts = ''
       142.137.248.40 clubetudiant.etsmtl.ca
+      10.194.33.97   git.etsmtl.ca
     '';
     networkmanager.enable = true;
     networkmanager.plugins = [pkgs.networkmanager-openconnect];
     networkmanager.dns = "systemd-resolved";
     # nameservers = [ "9.9.9.9" "142.137.248.40" ];
     firewall = {
-      allowedTCPPorts = [22 80 443 631 5353 6530 6379 5000 5173 9050 9051 18080 51049 35308];
-      allowedUDPPorts = [51820 51049 18080 34197 37259 35308 39088];
+      allowedTCPPorts = [
+        22 #ssh
+        7656 # default sam port
+        7070 # default web interface port
+        4447 # default socks proxy port
+        4444 # default http proxy port
+      ];
+      allowedUDPPorts = [
+        4447 # default socks proxy port
+        4444 # default http proxy port
+      ];
       checkReversePath = "loose";
     };
 
@@ -25,25 +35,17 @@
         autostart = true;
         address = ["10.100.0.2/32"];
         privateKeyFile = "/etc/wireguard/v34l_private.key";
-        dns = ["192.168.2.51"];
+        dns = ["192.168.2.1"];
         mtu = 1412;
         peers = [
           {
             publicKey = "NG2zL6LVxfcfubAi3ydxCnJfpCagX/HaMXZ8ubrHQCM=";
-            allowedIPs = ["0.0.0.0/0" "192.168.0.0/22"];
-            endpoint = "v34l.com:51820";
+            allowedIPs = ["0.0.0.0/0" "10.100.0.1/24" "192.168.2.1/32"];
+            endpoint = " m15ty.com:51820";
             persistentKeepalive = 25;
           }
         ];
       };
-
-      # user01 = {
-      #   configFile = "/etc/wireguard/user01.conf";
-      # };
-
-      # cedille = {
-      #   configFile = "/etc/wireguard/cedille.conf";
-      # };
     };
   };
 

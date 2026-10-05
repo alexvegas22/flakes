@@ -15,7 +15,7 @@
     fd
     ripgrep
     nmap
-    vesktop
+    discordcanary
     dive
     docker
     docker-compose
@@ -46,6 +46,7 @@
     imagemagick
     inkscape
     jq
+    jellyfin-desktop
     keepassxc
     keymapp
     killall
