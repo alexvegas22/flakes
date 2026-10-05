@@ -15,7 +15,7 @@
     fd
     ripgrep
     nmap
-    discordcanary
+    discord-canary
     dive
     docker
     docker-compose
