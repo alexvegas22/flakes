@@ -7,7 +7,6 @@
   home.packages = with pkgs; [
     i2p
     mullvad-vpn
-    onionshare-gui
     qbittorrent
     tor
     torsocks

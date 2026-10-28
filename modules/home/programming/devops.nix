@@ -6,6 +6,7 @@
     kubectl
     velero
     k9s
+    sops
     forgejo-cli
     kube-score
     kubebuilder
