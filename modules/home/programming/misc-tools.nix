@@ -3,6 +3,7 @@
     arduino-ide
     cargo
     screen
+    penpot-desktop
     git
     glib
     hugo
